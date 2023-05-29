@@ -8,7 +8,8 @@ export const useTaskStore = defineStore('taskStore', {
         currentInstalaciones: [],
         equiposGabinete: [],
         currentRack: 0,
-        dbConnection: true
+        dbConnection: true,
+        ipAddress: "http://192.168.1.81:5000"
     }),
     getters: {
         // favCount(){
@@ -25,7 +26,7 @@ export const useTaskStore = defineStore('taskStore', {
     actions: {
         async getSubestaciones() {
             try {
-                const res = await fetch('http://192.168.1.69:5000/subestaciones')
+                const res = await fetch(this.ipAddress + '/subestaciones')
                 const data = await res.json()
                 this.subestaciones = data
 
@@ -36,7 +37,7 @@ export const useTaskStore = defineStore('taskStore', {
         },
         async getInstalaciones() {
             try {
-                const res2 = await fetch('http://192.168.1.69:5000/instalaciones')
+                const res2 = await fetch(this.ipAddress + '/instalaciones')
                 const data2 = await res2.json()
                 this.instalaciones = data2
             } catch (error) {
@@ -46,7 +47,7 @@ export const useTaskStore = defineStore('taskStore', {
         },
         async getEquipos() {
             try {
-                const res3 = await fetch('http://192.168.1.69:5000/equipos/' + this.currentRack)
+                const res3 = await fetch(this.ipAddress + '/equipos/' + this.currentRack)
                 const data3 = await res3.json()
                 this.equiposGabinete = data3
             } catch (error) {

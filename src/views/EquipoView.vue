@@ -46,6 +46,10 @@ import RenderImage from '../components/RenderImage.vue'
 import DetallesEquipoComponent from '../components/detallesEquipo.vue'
 import CaracteristicasEquipoComponent from '../components/CaracteristicasEquipo.vue'
 import PuertosTable from '../components/PuertosTable.vue'
+import { useTaskStore } from '../stores/taskStore';
+
+      
+  
 
 export default {
     components: { RenderImage, DetallesEquipoComponent, CaracteristicasEquipoComponent, PuertosTable },
@@ -53,7 +57,8 @@ export default {
     data() {
         return {
             DetallesEquipo: [],
-            readyToRead: false
+            readyToRead: false,
+            taskstore: useTaskStore()
         }
     },
     methods: {
@@ -63,18 +68,18 @@ export default {
         async getTreeView() {
             try {
                 //obtenemos detalles equipo
-                const res = await fetch('http://192.168.1.69:5000/equipo/' + this.idProduct)
+                const res = await fetch(this.taskstore.ipAddress+'/equipo/' + this.idProduct)
                 const detalles = await res.json()
                 this.DetallesEquipo = detalles[0]
 
                 //obtener caracteristicas
-                const res2 = await fetch('http://192.168.1.69:5000/equipoInfoExtra/' + this.idProduct)
+                const res2 = await fetch(this.taskstore.ipAddress+'/equipoInfoExtra/' + this.idProduct)
                 const ficha = await res2.json()
                 this.DetallesEquipo.caracteristicas = ficha
 
                 //obtener puertos , solo si puertos es true
                 if (this.DetallesEquipo.puertos_especificos) {
-                    const res3 = await fetch('http://192.168.1.69:5000/equipoPuertosEspecificos/' + this.idProduct)
+                    const res3 = await fetch(this.taskstore.ipAddress+'/equipoPuertosEspecificos/' + this.idProduct)
                     const puertos = await res3.json()
                     this.DetallesEquipo.puertos = puertos
                 }
