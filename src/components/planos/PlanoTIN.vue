@@ -43,7 +43,7 @@
                         <td class="px-3 py-4"> </td>
                         <td class="px-3 py-4 "></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145,'D15')"> D15 </td>
+                            @click="verGabinete(145, 'D15', 'cargadores')"> D15 </td>
                         <td class="px-1 bg-gray-400"></td>
                         <td class="rotate-45" rowspan="3" colspan="5"> Bodega 1 </td>
                         <td class="px-1 bg-gray-400"></td>
@@ -60,10 +60,10 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(136, 'C14')"> C14 </td>
+                            @click="verGabinete(136, 'C14', 'interruptores')"> C14 </td>
                         <td class="px-3 py-4 "></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(144, 'D14')"> D14 </td>
+                            @click="verGabinete(144, 'D14', 'cargadores')"> D14 </td>
                         <td class="px-1 bg-gray-400"></td>
 
                         <td class="px-1 bg-gray-400"></td>
@@ -83,7 +83,7 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(143, 'D13')"> D13 </td>
+                            @click="verGabinete(143, 'D13', 'cargadores')"> D13 </td>
                         <td class="px-1 bg-gray-400"></td>
 
                         <td class="px-1 bg-gray-400"></td>
@@ -101,10 +101,10 @@
                             @click="verGabinete(121, 'B12')"> B12 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(134, 'C12')"> C12 </td>
+                            @click="verGabinete(134, 'C12', 'interruptores')"> C12 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(142, 'D12')"> D12 </td>
+                            @click="verGabinete(142, 'D12', 'cargadores')"> D12 </td>
                         <td class="px-1 bg-gray-400 border-b-8 border-gray-400"></td>
                         <td class="px-1 border-b-8 border-gray-400"></td>
                         <td class="px-1 border-b-8 border-gray-400"></td>
@@ -149,7 +149,7 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(132, 'C10')"> C10 </td>
+                            @click="verGabinete(132, 'C10', 'interruptores')"> C10 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-1 bg-gray-400 border-t-8 border-gray-400"></td>
@@ -173,7 +173,7 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(131, 'C9')"> C9 </td>
+                            @click="verGabinete(131, 'C9', 'interruptores')"> C9 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-1 bg-gray-400"></td>
@@ -196,7 +196,7 @@
                             @click="verGabinete(117, 'B8')"> B8 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(130, 'C8')"> C8 </td>
+                            @click="verGabinete(130, 'C8', 'interruptores')"> C8 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-1 bg-gray-400"></td>
@@ -264,7 +264,7 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-1 bg-gray-400"></td>
-                        
+
                         <td class="px-1 bg-gray-400"></td>
                         <td></td>
                     </tr>
@@ -281,7 +281,7 @@
                             @click="verGabinete(113, 'B4')"> B4 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(126, 'C4')"> C4 </td>
+                            @click="verGabinete(126, 'C4', 'interruptores')"> C4 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-1 bg-gray-400"></td>
@@ -302,10 +302,10 @@
                             @click="verGabinete(112, 'B3')"> B3 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(125, 'C3')"> C3 </td>
+                            @click="verGabinete(125, 'C3', 'interruptores')"> C3 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(139, 'D3')"> D3 </td>
+                            @click="verGabinete(139, 'D3', 'cargadores')"> D3 </td>
                         <td class="px-1 bg-gray-400"></td>
 
                         <td class="px-1 bg-gray-400"></td>
@@ -324,10 +324,10 @@
                             @click="verGabinete(111, 'B2')"> B2 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(124, 'C2')"> C2 </td>
+                            @click="verGabinete(124, 'C2', 'interruptores')"> C2 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(138, 'D2')"> D2 </td>
+                            @click="verGabinete(138, 'D2', 'cargadores')"> D2 </td>
                         <td class="px-1 bg-gray-400"></td>
                         <td class="px-3 py-4" colspan="5"></td>
                         <td class="px-1 bg-gray-400"></td>
@@ -345,10 +345,10 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(123, 'C1')"> C1 </td>
+                            @click="verGabinete(123, 'C1', 'interruptores')"> C1 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(137, 'D1')"> D1 </td>
+                            @click="verGabinete(137, 'D1', 'cargadores')"> D1 </td>
                         <td class="px-1 bg-gray-400"></td>
                         <td class="px-3 py-4" colspan="5"></td>
                         <td class="px-1 bg-gray-400"></td>
@@ -402,7 +402,7 @@ import { useTaskStore } from '../../stores/taskStore';
 
 
 export default {
-    
+
     data() {
         return {
             router: useRouter(),
@@ -411,9 +411,25 @@ export default {
         }
     },
     methods: {
-        verGabinete(id,name) {
-             this.taskS.currentRack = id
-            this.router.push('/rack/' + id +'/'+name)
+        verGabinete(id, name, vista) {
+
+            console.log('entra en verGabinetes');
+
+            if (vista == "cargadores") {
+                this.taskS.currentRack = id
+                this.router.push('/cargadores/' + id + '/' + name)
+                console.log('opcion 1 ');
+            } else if (vista == "interruptores") {
+                this.taskS.currentRack = id
+                this.router.push('/interruptores/' + id + '/' + name)
+                console.log('opcion 2 ');
+            } else {
+                this.taskS.currentRack = id
+                this.router.push('/rack/' + id + '/' + name)
+                console.log('opcion 3 ');
+            }
+
+
         }
     }
 }

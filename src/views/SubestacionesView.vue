@@ -16,7 +16,7 @@
                     </div>
                     <input type="text" v-model="searchText" id="table-search"
                         class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500  "
-                        placeholder="Search for items">
+                        placeholder="Buscar Subestacion">
                 </div>
             </div>
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

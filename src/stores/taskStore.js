@@ -9,7 +9,9 @@ export const useTaskStore = defineStore('taskStore', {
         equiposGabinete: [],
         currentRack: 0,
         dbConnection: true,
-        ipAddress: "http://192.168.1.81:5000"
+        ipAddress: "http://192.168.1.69:5000",
+        ipLocalServ:"http://192.168.1.69:5173",
+        gabineteFiles: ""
     }),
     getters: {
         // favCount(){
@@ -50,6 +52,20 @@ export const useTaskStore = defineStore('taskStore', {
                 const res3 = await fetch(this.ipAddress + '/equipos/' + this.currentRack)
                 const data3 = await res3.json()
                 this.equiposGabinete = data3
+            } catch (error) {
+                this.dbConnection = false
+                console.log('Error conexion DB')
+            }
+        },
+        async getFilesGabinete() {
+            try {
+                const res4 = await fetch(this.ipAddress + '/gabinetes/' + this.currentRack)
+                const data4 = await res4.json()
+
+                console.log('getFilesGabionte');
+                console.log(data4);
+
+                this.gabineteFiles = data4[0]
             } catch (error) {
                 this.dbConnection = false
                 console.log('Error conexion DB')

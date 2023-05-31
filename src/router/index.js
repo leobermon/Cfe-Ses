@@ -6,6 +6,9 @@ import MenuSubestacionView from '../views/MenuSubestacionView.vue'
 import PlanosView from '../views/PlanosView.vue'
 import UnifilaresView from '../views/UnifilaresView.vue'
 import RackView from '../views/RackView.vue'
+import CargadoresView from '../views/CargadoresView.vue'
+import InterruptoresView from '../views/InterruptoresView.vue'
+
 import EquipoView from '../views/EquipoView.vue'
 
 const router = createRouter({
@@ -43,6 +46,18 @@ const router = createRouter({
       props: true,
       name: "",
       component: RackView
+    },
+    {
+      path: "/cargadores/:rackId/:name",
+      props: true,
+      name: "",
+      component: CargadoresView
+    },
+    {
+      path: "/interruptores/:rackId/:name",
+      props: true,
+      name: "",
+      component: InterruptoresView
     },
     {
       path: "/equipo/:idProduct",
