@@ -5,7 +5,9 @@ module.exports = {
       colors: {
         "cc-primary": "#FFFFFF",
         "cc-secondary": "#F9FAFB",
-        "cc-official": "#00804f"
+        "cc-official": "#00804f",
+        "gabineteColor": "#d2cdc0",
+        "gabineteText": "#dbd9d0"
       },
     },
     fontFamily: {
@@ -18,7 +20,7 @@ module.exports = {
     },
     screens: {
       sm: "640px",
-      md: "768px",
+      md: "768px", 
     },
   },
   plugins: [],
