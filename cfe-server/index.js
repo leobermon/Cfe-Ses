@@ -146,6 +146,27 @@ app.get('/equipoPuertosEspecificos/:idEquipo',(req, res) => {
 })
 
 
+app.get('/gabinetes/:idGabinete',(req, res) => {
+ 
+    db.getConnection((err, conn) => { conn.query(`SELECT archivo FROM gabinetes WHERE id = ${req.params.idGabinete}` , function (err, result) {
+            if (err) {
+                res.send({ mensaje: 'error, no data DB', data: err });
+            } else {
+                if (result.length > 0) {
+                    console.log(`/gabinetes/ ${req.params.idEquipo} - ` + moment().format('HH::mm:ss'));
+                    res.send(result)
+                } else {
+                    console.log(`/gabinetes/ ${req.params.idEquipo} - ` + moment().format('HH::mm:ss'));
+                    res.send(result);
+                }
+            }
+            conn.release();
+        });
+    })
+
+})
+
+
 app.listen(PORT, () => {
     console.log('app running in: ' + PORT);
 })
