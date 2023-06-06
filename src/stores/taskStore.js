@@ -8,6 +8,7 @@ export const useTaskStore = defineStore('taskStore', {
         currentInstalaciones: [],
         equiposGabinete: [],
         currentRack: 0,
+        currentRackName: '',
         dbConnection: true,
         ipAddress: "http://192.168.1.69:5000",
         ipLocalServ:"http://192.168.1.69:5173",
@@ -71,5 +72,6 @@ export const useTaskStore = defineStore('taskStore', {
                 console.log('Error conexion DB')
             }
         }
+        
     }
 })

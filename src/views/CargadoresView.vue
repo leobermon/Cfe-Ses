@@ -7,7 +7,7 @@
             </div>
             <div class="text-right col-span-2 ">
                 <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 ">
-                    {{ name }}
+                    {{ taskStore2.currentRackName}}
                 </h5>
             </div>
         </div>
@@ -63,7 +63,7 @@ import RenderImage from '../components/RenderImage.vue'
 
 export default {
     components: { RenderImage },
-    props: ['rackId', "name"],
+    props: ['rackId'],
     setup() {
         //cargamos los datos de la base de datos 
         const taskStore = useTaskStore();

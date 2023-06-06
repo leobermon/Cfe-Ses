@@ -8,10 +8,12 @@
             </div>
 
             <div class="col-span-12 ">
-                <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                    acquisitions
-                    of 2021 so far, in reverse chronological order.</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400"> Seleccione el gabinete donde desea visualizar los equipos y obtener informacion </p>
+                <br>
+
+                <p class="text-gray-500 text-right text-sm " >Ultima actualizacion, Junio del 2023</p>
             </div>
+            
 
         </div>
 
@@ -417,15 +419,18 @@ export default {
 
             if (vista == "cargadores") {
                 this.taskS.currentRack = id
-                this.router.push('/cargadores/' + id + '/' + name)
+                this.taskS.currentRackName = name
+                this.router.push('/cargadores/' + id )
                 console.log('opcion 1 ');
             } else if (vista == "interruptores") {
                 this.taskS.currentRack = id
-                this.router.push('/interruptores/' + id + '/' + name)
+                this.taskS.currentRackName = name
+                this.router.push('/interruptores/' + id )
                 console.log('opcion 2 ');
             } else {
                 this.taskS.currentRack = id
-                this.router.push('/rack/' + id + '/' + name)
+                this.taskS.currentRackName = name
+                this.router.push('/rack/' + id )
                 console.log('opcion 3 ');
             }
 

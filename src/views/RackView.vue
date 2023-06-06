@@ -1,38 +1,22 @@
 <template>
     <div class="container py-4 ">
 
-
-
-        <div class="">
-
-
-
-
-
-
-
-        </div>
-
-
-
         <div class="grid  grid-cols-12 py-4 container " style="background-color:#949494; border-radius:10px 10px 0px 0px">
 
             <div class="col-span-10 ">
                 <h1 CLASS="text-3xl text-cursive font-medium ">SUBESTACION TINTAL </h1>
 
-
             </div>
             <div class="text-right col-span-2 ">
                 <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 ">
-                    {{ name }}
+                    {{ taskStore2.currentRackName }}
                 </h5>
             </div>
 
             <div class="col-span-12 " v-if="taskStore2.gabineteFiles.archivo > 0">
                 <a type="button" target=”_blank” :href="taskStore2.ipLocalServ+'/src/assets/PDF/'+taskStore2.gabineteFiles.archivo+'.pdf'" 
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    
-                    
+                                        
                     Diagrama de Proteccion, Medicion y Control 
                     
                 </a>
@@ -92,7 +76,7 @@ import RenderImage from '../components/RenderImage.vue'
 
 export default {
     components: { RenderImage },
-    props: ['rackId', "name"],
+    props: ['rackId'],
     setup() {
         //cargamos los datos de la base de datos 
         const taskStore = useTaskStore();

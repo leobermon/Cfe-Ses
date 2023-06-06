@@ -23,16 +23,7 @@
         <PuertosTable v-if="DetallesEquipo.puertos_especificos" :puertos="DetallesEquipo.puertos" />
 
         <!-- Notas / Observaciones --- Codigo QR-->
-        <div class="border-gray-200 m-6 border-2 text-[11px]">
-            <p class=" border-b-2 border-gray-300 text-center"> -NOTAS/OBSERVACIONES/COMENTARIOS-</p>
-
-            ESTE ODF ESTA MUY DELICADO , SE RECOMIENDA NO MOVER MUCHO LOS PICK TAILS 
-            LOS SERVICIOS SON DE DISTRIBUCION , PONERSE DE ACUERDO  
-            <br/>
-            
-            FALTA CAMBIAR LAS ETIQUETAS 
-
-        </div>
+      
 
         <div>
 

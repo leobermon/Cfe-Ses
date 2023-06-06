@@ -30,7 +30,7 @@ const router = createRouter({
       name: "",
       component: MenuSubestacionView
     },
-    {
+    { 
       path: "/plano/:idSubestacion",
       name: "",
       props:true,
@@ -42,19 +42,19 @@ const router = createRouter({
       component: UnifilaresView
     },
     {
-      path: "/rack/:rackId/:name",
+      path: "/rack/:rackId",
       props: true,
       name: "",
       component: RackView
     },
     {
-      path: "/cargadores/:rackId/:name",
+      path: "/cargadores/:rackId",
       props: true,
       name: "",
       component: CargadoresView
     },
     {
-      path: "/interruptores/:rackId/:name",
+      path: "/interruptores/:rackId",
       props: true,
       name: "",
       component: InterruptoresView
