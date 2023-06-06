@@ -167,6 +167,27 @@ app.get('/gabinetes/:idGabinete',(req, res) => {
 })
 
 
+app.get('/interruptores/:idGabinete',(req, res) => {
+ 
+    db.getConnection((err, conn) => { conn.query(`SELECT * FROM interruptores WHERE gabinete = ${req.params.idGabinete}` , function (err, result) {
+            if (err) {
+                res.send({ mensaje: 'error, no data DB', data: err });
+            } else {
+                if (result.length > 0) {
+                    console.log(`/gabinetes/ ${req.params.idEquipo} - ` + moment().format('HH::mm:ss'));
+                    res.send(result)
+                } else {
+                    console.log(`/gabinetes/ ${req.params.idEquipo} - ` + moment().format('HH::mm:ss'));
+                    res.send(result);
+                }
+            }
+            conn.release();
+        });
+    })
+
+})
+
+
 app.listen(PORT, () => {
     console.log('app running in: ' + PORT);
 })
