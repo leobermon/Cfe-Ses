@@ -13,7 +13,7 @@
                 </h5>
             </div>
 
-            <div class="col-span-12 " v-if="taskStore2.gabineteFiles.archivo > 0">
+            <div class="col-span-12 " v-if="taskStore2.gabineteFiles && taskStore2.gabineteFiles.archivo > 0">
                 <a type="button" target=”_blank” :href="taskStore2.ipLocalServ+'/src/assets/PDF/'+taskStore2.gabineteFiles.archivo+'.pdf'" 
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                         
@@ -69,7 +69,8 @@
 </template>
   
 <script>
-import { useRouter } from 'vue-router';
+
+import { useRouter, useRoute  } from 'vue-router';
 import { useTaskStore } from '../stores/taskStore';
 import RenderImage from '../components/RenderImage.vue'
 
@@ -79,7 +80,28 @@ export default {
     props: ['rackId'],
     setup() {
         //cargamos los datos de la base de datos 
+
+        
+        const route = useRoute()
+        
+        
         const taskStore = useTaskStore();
+
+        
+
+        if(taskStore.currentRack == 0){
+            console.log('el rack esta en 0, se le asigna el numero ')
+
+            console.log('params');
+            console.log(route.params.rackId)
+
+            taskStore.currentRack = route.params.rackId
+
+        }else{
+
+            console.log('ya tiene datos de rack');
+        }
+
         taskStore.getEquipos();
         taskStore.getFilesGabinete();
     },
