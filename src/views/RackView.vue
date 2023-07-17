@@ -81,25 +81,26 @@ export default {
     setup() {
         //cargamos los datos de la base de datos 
 
-        
         const route = useRoute()
-        
-        
+        const route2 = useRouter()
         const taskStore = useTaskStore();
 
-        
+        const interruptores = [123, 124, 125, 126, 130, 131, 132, 134, 136];
+        const cargadores = [137, 138, 139, 142, 143, 144, 145];
 
-        if(taskStore.currentRack == 0){
-            console.log('el rack esta en 0, se le asigna el numero ')
+        if (taskStore.currentRack == 0) {
+            //comprobar si es interruptor o cargador
 
-            console.log('params');
-            console.log(route.params.rackId)
+            if (cargadores.includes(parseInt(route.params.rackId))) {
+                taskStore.currentRack = route.params.rackId
+                route2.push('/cargadores/' + route.params.rackId)
+            } else if (interruptores.includes(parseInt(route.params.rackId))) {
+                taskStore.currentRack = route.params.rackId
+                route2.push('/interruptores/' + route.params.rackId)
+            } else {
+                taskStore.currentRack = route.params.rackId
+            }
 
-            taskStore.currentRack = route.params.rackId
-
-        }else{
-
-            console.log('ya tiene datos de rack');
         }
 
         taskStore.getEquipos();
