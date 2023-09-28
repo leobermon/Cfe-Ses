@@ -1,7 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
+
+import PageNotFound from '../components/PageNotFound.vue'
+import Directorioview from  '../components/Directorioview.vue'
+
 import HomeView from '../views/HomeView.vue'
 import SubestacionesView from '../views/SubestacionesView.vue'
-import PageNotFound from '../components/PageNotFound.vue'
 import MenuSubestacionView from '../views/MenuSubestacionView.vue'
 import PlanosView from '../views/PlanosView.vue'
 import UnifilaresView from '../views/UnifilaresView.vue'
@@ -9,6 +13,8 @@ import RackView from '../views/RackView.vue'
 import CargadoresView from '../views/CargadoresView.vue'
 import InterruptoresView from '../views/InterruptoresView.vue'
 import enlacesOtn from '../views/EnlacesOtn.vue'
+
+
 
 import EquipoView from '../views/EquipoView.vue'
 
@@ -70,6 +76,11 @@ const router = createRouter({
       props:true,
       name: "",
       component: EquipoView
+    },
+    {
+      path: "/directorio",
+      name: "",
+      component: Directorioview
     },
     
     {
