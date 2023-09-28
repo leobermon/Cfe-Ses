@@ -8,6 +8,7 @@ import UnifilaresView from '../views/UnifilaresView.vue'
 import RackView from '../views/RackView.vue'
 import CargadoresView from '../views/CargadoresView.vue'
 import InterruptoresView from '../views/InterruptoresView.vue'
+import enlacesOtn from '../views/EnlacesOtn.vue'
 
 import EquipoView from '../views/EquipoView.vue'
 
@@ -23,6 +24,11 @@ const router = createRouter({
       path: "/subestaciones",
       name: "subestaciones",
       component: SubestacionesView
+    },
+    {
+      path: "/enlacesOtn",
+      name: "enlacesOtn",
+      component: enlacesOtn
     },
     {
       path: "/subestacion/:idSe",
