@@ -13,12 +13,14 @@
                 </h5>
             </div>
 
-            <div class="col-span-12 " v-if="taskStore2.gabineteFiles && taskStore2.gabineteFiles.archivo > 0">
-                <a type="button" target=”_blank” :href="taskStore2.ipLocalServ+'/src/assets/PDF/'+taskStore2.gabineteFiles.archivo+'.pdf'" 
+            <div class="col-span-12 " v-if="taskStore2.gabineteFiles ">
+                {{ taskStore2.gabineteFiles }}
+                <a type="button" target=”_blank”
+                    :href="taskStore2.ipLocalServ + '/src/assets/PDF/' + taskStore2.gabineteFiles.archivo + '.pdf'"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        
-                    Diagrama de Proteccion, Medicion y Control 
-                    
+
+                    Diagrama de Proteccion, Medicion y Control
+
                 </a>
 
             </div>
@@ -70,7 +72,7 @@
   
 <script>
 
-import { useRouter, useRoute  } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 import { useTaskStore } from '../stores/taskStore';
 import RenderImage from '../components/RenderImage.vue'
 
