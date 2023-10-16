@@ -19,42 +19,47 @@
       </div>
     </div>
     <div v-else>
-      <div class="grid gap-2 md:grid-cols-2 py-4 ">
+      <div class="grid gap-2 md:grid-cols-2 py-4 self-center place-content-center ">
 
         <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-700 cursor-pointer "
+          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('subestaciones')">
-          <img src="../assets/img/se.jpg" class="h-30 w-30" />
+          <img src="../assets/img/se.jpg" class="h-12 md:h-20 w-30" />
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">SUBESTACIONES </h5>
-          <p class="font-normal ">Lista de Subestaciones CFE Transmision</p>
+          <p class="text-sm">Lista de Subestaciones CFE Transmision</p>
         </div>
 
         <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-700 cursor-pointer "
-          @click="mandarALink">
-          <img src="../assets/img/otn.svg" class="h-30 w-30" />
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OTN </h5>
-          <p class="font-normal ">Mapa con los enlaces de quipos OTN</p>
-        </div>
-
-        <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-700 cursor-pointer "
-          @click="changeRoute('enlacesOplat')">
-          <img src="../assets/img/oplat.svg" class="h-30 w-30" />
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OPLAT </h5>
-          <p class="font-normal ">Mapa con los enlaces de quipos Oplat</p>
-        </div>
-
-        <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-700 cursor-pointer "
+          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('directorio')">
-          <img src="../assets/img/directorio.svg" class="h-30 w-30" />
+          <img src="../assets/img/directorio.svg" class="h-20 w-30" />
           <h6 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 ">DIRECTORIO TELEFONICO</h6>
-          <p class="font-normal ">Directorio con las extensiones de telefono , zona ZTCNC</p>
+          <p class="text-sm ">Directorio con las extensiones de telefono , zona ZTCNC</p>
         </div>
 
-        V. {{ version }}
+        <div
+          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeRoute('enlacesOtn')">
+          <img src="../assets/img/otn.svg" class="h-20 w-30" />
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OTN </h5>
+          <p class="text-sm ">Mapa con los enlaces de quipos OTN</p>
+        </div>
 
+        <div
+          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeRoute('enlacesEci')">
+          <img src="../assets/img/eci.svg" class="h-20 w-30" />
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES ECI </h5>
+          <p class="text-sm ">Mapa con los enlaces de quipos ECI</p>
+        </div>
+
+        <div
+          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeRoute('enlacesOplat')">
+          <img src="../assets/img/oplat.svg" class="h-20 w-30" />
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OPLAT </h5>
+          <p class="text-sm">Mapa con los enlaces de quipos ECI</p>
+        </div>
 
       </div>
     </div>
@@ -64,14 +69,13 @@
 <script>
 import { useRouter } from "vue-router";
 import { useTaskStore } from '../stores/taskStore';
-import { version } from '../../package.json'
+
 
 export default {
   data() {
     return {
       router: useRouter(),
-      taskstore: useTaskStore(),
-      version: version
+      taskstore: useTaskStore()
     }
   },
   methods: {
@@ -80,12 +84,11 @@ export default {
       console.log('click en funcion');
       this.router.push(rout)
     },
-    mandarALink(){
+    mandarALink() {
       window.location.href = "http://192.168.1.78:5173/src/assets/enlaces/tin-niz2.svg";
     }
   }
 }
-
 
 </script>
 

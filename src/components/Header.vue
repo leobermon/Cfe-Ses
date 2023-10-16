@@ -1,5 +1,5 @@
 <template>
-    <header class=" top-0 shadow-lg bg-stone-100 ">
+    <header class=" top-0 shadow-lg bg-stone-50 ">
       <nav
         class="container flex items-center gap-4  py-6"
       >
@@ -12,12 +12,12 @@
   
         <div class="flex gap-3 flex-1 justify-end">
           <div @click="changeRoute" class="cursor-pointer" >
-            <a className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-cc-official">Regresar</a>
+            <a className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-300 hover:text-cc-official">Regresar</a>
           </div>
           
           <RouterLink :to="{ name: 'home' }">
           <div class="cursor-pointer">
-            <a className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-cc-official">Inicio</a>  
+            <a className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-300 hover:text-cc-official">Inicio</a>  
           </div>
         </RouterLink>
                     

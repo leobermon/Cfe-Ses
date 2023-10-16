@@ -4,15 +4,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PageNotFound from '../components/PageNotFound.vue'
 import Directorioview from  '../components/Directorioview.vue'
 
-import HomeView from '../views/HomeView.vue'
-import SubestacionesView from '../views/SubestacionesView.vue'
-import MenuSubestacionView from '../views/MenuSubestacionView.vue'
+import MenuInicio from '../views/MenuInicio.vue'
+import ListaSubestaciones from '../views/ListaSubestaciones.vue'
+import MenuSubestacion from '../views/MenuSubestacion.vue'
 import PlanosView from '../views/PlanosView.vue'
 import UnifilaresView from '../views/UnifilaresView.vue'
 import RackView from '../views/RackView.vue'
 import CargadoresView from '../views/CargadoresView.vue'
 import InterruptoresView from '../views/InterruptoresView.vue'
-import enlacesOtn from '../views/EnlacesOtn.vue'
+
+import enlacesOplat from '../components/maps/enlacesOplat.vue'
+import enlacesOtn from '../components/maps/enlacesOtn.vue'
+import enlacesEci from '../components/maps/enlacesEci.vue'
 
 
 
@@ -24,23 +27,19 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: MenuInicio
     },
     {
       path: "/subestaciones",
       name: "subestaciones",
-      component: SubestacionesView
+      component: ListaSubestaciones
     },
-    {
-      path: "/enlacesOtn",
-      name: "enlacesOtn",
-      component: enlacesOtn
-    },
+   
     {
       path: "/subestacion/:idSe",
       props: true,
       name: "",
-      component: MenuSubestacionView
+      component: MenuSubestacion
     },
     { 
       path: "/plano/:idSubestacion",
@@ -58,6 +57,21 @@ const router = createRouter({
       props: true,
       name: "",
       component: RackView
+    },
+    {
+      path: "/enlacesOplat",
+      name: "",
+      component: enlacesOplat
+    },
+    {
+      path: "/enlacesOtn",
+      name: "",
+      component: enlacesOtn
+    },
+    {
+      path: "/enlacesEci",
+      name: "",
+      component: enlacesEci
     },
     {
       path: "/cargadores/:rackId",
