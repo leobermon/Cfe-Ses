@@ -28,12 +28,17 @@
                             :class="[(equipo.idEquipo > 0) ? 'place-content-center bg-slate-200 mt-4 cursor-pointer' : 'place-content-center bg-slate-200 mt-4']"
                             @click="VerEquipo(equipo.idEquipo)" v-for="equipo in a.equipos">
                             <h2 id="firstHeading"
-                                class="firstHeading text-xl font-bold text-center  border border-2 border-black "> {{
+                                class="firstHeading text-xl font-bold text-center border-2 border-black "> {{
                                     equipo.nombre }}
                             </h2>
                             <div id="bodyContent">
                                 <p class="place-content-center">
-                                    <img src="../../assets/img/imgMaps/OPLAT.svg" alt="">
+
+                                    <img v-if="equipo.imgId == '1'" src="../../assets/img/imgMaps/OPLAT.svg" alt="">
+                                    <img v-else-if="equipo.imgId == '2'" src="../../assets/img/imgMaps/OPLAT2.svg" alt="">
+                                    <img v-else-if="equipo.imgId == '3'" src="../../assets/img/imgMaps/OPLAT3.svg" alt="">
+
+
                                 </p>
 
                             </div>
@@ -65,14 +70,14 @@ export default {
         return {
             center: { lat: 20.8966297, lng: -87.489809 },
             subestaciones: [
-                { lat: 20.692569, lng: -88.194927, abrev: 'VAD', nombre: 'VALLADOLID', equipos: [{ nombre: 'VAD-93050-BLM', idEquipo: 0 }, { nombre: 'VAD-93070-NIZ', idEquipo: 0 }] },
-                { lat: 20.686466, lng: -88.263579, abrev: 'DZT', nombre: 'DZINUP', equipos: [{ nombre: 'DZT-A3Q60-RMY', idEquipo: 0 }, { nombre: 'DZT-A3Q70-RMY', idEquipo: 0 }] },
-                { lat: 20.897165, lng: -87.489619, abrev: 'TIN', nombre: 'TINTAL', equipos: [{ nombre: 'TIN-73480-NIZ', idEquipo: 112 }, { nombre: 'TIN-73C80-CEX', idEquipo: 111 }] },
-                { lat: 21.186525, lng: -86.849396, abrev: 'BLM', nombre: 'BALAM', equipos: [{ nombre: 'BLM-93050-VAD', idEquipo: 146 }, { nombre: 'BLM-93060-NIZ', idEquipo: 147 }] },
-                { lat: 21.066734, lng: -86.847080, abrev: 'NIZ', nombre: 'NIZUC', equipos: [{ nombre: 'TIN-73480-NIZ', idEquipo: 255 }, { nombre: 'BLM-93060-NIZ', idEquipo: 30 }, { nombre: 'VAD-93070-NIZ', idEquipo: 1 }, { nombre: 'NIZ-93170-RMY', idEquipo: 44 }, { nombre: 'NIZ-93040-RMY', idEquipo: 29 }] },
-                { lat: 20.832738, lng: -86.930132, abrev: 'RMY', nombre: 'RIVIERA MAYA', equipos: [{ nombre: 'DZT-A3Q60-RMY', idEquipo: 150 }, { nombre: 'DZT-A3Q70-RMY', idEquipo: 151 }, { nombre: 'RMY-93170-NIZ', idEquipo: 152 }, { nombre: 'RMY-93040-NIZ', idEquipo: 153 }, { nombre: 'RMY-93190-PCN', idEquipo: 154 }, { nombre: 'RMY-93180-PCN', idEquipo: 155 }] },
-                { lat: 20.630698, lng: -87.082716, abrev: 'PCN', nombre: 'PLAYA DEL CARMEN', equipos: [{ nombre: 'RMY-93190-PCN', idEquipo: 148 }, { nombre: 'RMY-93180-PCN', idEquipo: 149 }] },
-                { lat: 20.661422, lng: -87.924403, abrev: 'CEX', nombre: 'CHEMAX', equipos: [{ nombre: 'CEX-73C80-TIN', idEquipo: 0 }] }
+                { lat: 20.692569, lng: -88.194927, abrev: 'VAD', nombre: 'VALLADOLID', equipos: [{ nombre: 'VAD-93050-BLM', idEquipo: 0, imgId: 1 }, { nombre: 'VAD-93070-NIZ', idEquipo: 0, imgId: 1 }] },
+                { lat: 20.686466, lng: -88.263579, abrev: 'DZT', nombre: 'DZINUP', equipos: [{ nombre: 'DZT-A3Q60-RMY', idEquipo: 0, imgId: 1 }, { nombre: 'DZT-A3Q70-RMY', idEquipo: 0, imgId: 1 }] },
+                { lat: 20.897165, lng: -87.489619, abrev: 'TIN', nombre: 'TINTAL', equipos: [{ nombre: 'TIN-73480-NIZ', idEquipo: 112,imgId: 2 }, { nombre: 'TIN-73C80-CEX', idEquipo: 111,imgId: 2 }] },
+                { lat: 21.186525, lng: -86.849396, abrev: 'BLM', nombre: 'BALAM', equipos: [{ nombre: 'BLM-93050-VAD', idEquipo: 146, imgId: 3 }, { nombre: 'BLM-93060-NIZ', idEquipo: 147, imgId: 3 }] },
+                { lat: 21.066734, lng: -86.847080, abrev: 'NIZ', nombre: 'NIZUC', equipos: [{ nombre: 'TIN-73480-NIZ', idEquipo: 255, imgId: 2 }, { nombre: 'BLM-93060-NIZ', idEquipo: 30, imgId: 3 }, { nombre: 'VAD-93070-NIZ', idEquipo: 1, imgId: 1 }, { nombre: 'NIZ-93170-RMY', idEquipo: 44, imgId: 1 }, { nombre: 'NIZ-93040-RMY', idEquipo: 29, imgId: 1 }] },
+                { lat: 20.832738, lng: -86.930132, abrev: 'RMY', nombre: 'RIVIERA MAYA', equipos: [{ nombre: 'DZT-A3Q60-RMY', idEquipo: 150,imgId: 1 }, { nombre: 'DZT-A3Q70-RMY', idEquipo: 151, imgId: 1 }, { nombre: 'RMY-93170-NIZ', idEquipo: 152, imgId: 1 }, { nombre: 'RMY-93040-NIZ', idEquipo: 153, imgId: 1 }, { nombre: 'RMY-93190-PCN', idEquipo: 154, imgId: 1 }, { nombre: 'RMY-93180-PCN', idEquipo: 155, imgId: 1 }] },
+                { lat: 20.630698, lng: -87.082716, abrev: 'PCN', nombre: 'PLAYA DEL CARMEN', equipos: [{ nombre: 'RMY-93190-PCN', idEquipo: 148, imgId: 1 }, { nombre: 'RMY-93180-PCN', idEquipo: 149, imgId: 1 }] },
+                { lat: 20.661422, lng: -87.924403, abrev: 'CEX', nombre: 'CHEMAX', equipos: [{ nombre: 'CEX-73C80-TIN', idEquipo: 0, imgId: 2 }] }
             ],
             VadBlm: {
                 path: [

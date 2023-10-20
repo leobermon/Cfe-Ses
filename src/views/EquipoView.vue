@@ -5,26 +5,24 @@
             <div class="col-span-3">
                 <RenderImage style="width: 100px;" class=" text-left" :hasImg="true" :imdId="DetallesEquipo.marcaId" :typeImg="'Marcas'" />
             </div>
-            <div class="col-span-9">
+            <div class="col-span-9 underline underline-offset-4 ">
                 <h1 class="text-2xl font-extrabold tracking-tight"> {{ DetallesEquipo.etiquetaTablero }}</h1>
+
             </div>
         </div>
 
         <!-- Detalles Equipos  -->
         <DetallesEquipoComponent :equipo="DetallesEquipo" />
 
-        <!-- Caracteristicas Equipos -->
-        <CaracteristicasEquipoComponent :equipo="DetallesEquipo.caracteristicas" />
-
         <!-- Mostramos la imagen -->
-        <RenderImage class="py-4" :hasImg="DetallesEquipo.imgActive" :imdId="DetallesEquipo.nombreModeloId" :typeImg="'ModeloEquipo'" />
+        <RenderImage class="py-4" :hasImg="DetallesEquipo.imgActive" :imdId="DetallesEquipo.modelo" :typeImg="'ModeloEquipo'" />
 
         <!-- PONEMOS LA TABLA DE PUERTOS , SI ES QUE EXISTE  -->
         <PuertosTable v-if="DetallesEquipo.puertos_especificos" :puertos="DetallesEquipo.puertos" />
-
         <!-- Notas / Observaciones --- Codigo QR-->
-      
 
+        <NotasEquipo v-if="DetallesEquipo.notas && DetallesEquipo.notas.length > 0 " :notas="DetallesEquipo.notas" />
+      
         <div>
 
         </div>
@@ -34,8 +32,9 @@
 
 <script>
 import RenderImage from '../components/RenderImage.vue'
-import DetallesEquipoComponent from '../components/detallesEquipo.vue'
-import CaracteristicasEquipoComponent from '../components/CaracteristicasEquipo.vue'
+import DetallesEquipoComponent from '../components/DetallesEquipo.vue'
+import NotasEquipo from '../components/NotasEquipo.vue'
+
 import PuertosTable from '../components/PuertosTable.vue'
 import { useTaskStore } from '../stores/taskStore';
 
@@ -43,7 +42,7 @@ import { useTaskStore } from '../stores/taskStore';
   
 
 export default {
-    components: { RenderImage, DetallesEquipoComponent, CaracteristicasEquipoComponent, PuertosTable },
+    components: { RenderImage, DetallesEquipoComponent, PuertosTable, NotasEquipo },
     props: ['idProduct'],
     data() {
         return {
@@ -74,6 +73,11 @@ export default {
                     const puertos = await res3.json()
                     this.DetallesEquipo.puertos = puertos
                 }
+
+                //obtener caracteristicas
+                const res3 = await fetch(this.taskstore.ipAddress+'/equipoNotas/' + this.idProduct)
+                const notas = await res3.json()
+                this.DetallesEquipo.notas = notas
 
 
                 this.readyToRead = true

@@ -30,15 +30,7 @@
                         </div>
 
                         <br>
-                        <div id="content" class="place-content-center bg-slate-200" style="cursor: pointer;">
-                            <h2 id="firstHeading" class="text-xl font-bold text-center"> {{ a.nombre }}</h2>
-                            <div id="bodyContent">
-                                <p class="place-content-center">
-                                    <img src="../../assets/img/imgMaps/OTN.svg" alt="" @click="test(a.idEquipo)"
-                                        style="cursos:pointer">
-                                </p>
-                            </div>
-                        </div>
+                    
                     </InfoWindow>
                 </Marker>
 
@@ -91,21 +83,24 @@
 import { GoogleMap, Marker, InfoWindow, Polyline, CustomMarker } from "vue3-google-map";
 import photo1 from '@/assets/img/imgMaps/caseta.svg'
 import MyNameClass from "../../stores/coordenadas.js";
+import { useRouter } from 'vue-router';
+  
 
 
 export default {
     components: { GoogleMap, Marker, Polyline, InfoWindow, CustomMarker },
     data() {
         return {
+            router: useRouter(),
             pruebaTest: new MyNameClass('leonel', 'bermon'),
             center: { lat: 20.8966297, lng: -87.489809 },
             subestaciones: [
                 { lat: 20.897165, lng: -87.489619, abrev: 'TIN', idEquipo: 17, nombre: 'TINTAL' }, //tintal
-                { lat: 21.068863, lng: -86.846417, abrev: 'NIZ', idEquipo: 0, nombre: 'NIZUC' }, //niz
-                { lat: 20.994938, lng: -86.887671, abrev: 'PTP', idEquipo: 0, nombre: 'PETEMPICH' }, //ptp
-                { lat: 20.984939, lng: -86.882867, abrev: 'MPA', idEquipo: 0, nombre: 'MOON PALACE' }, //mpl
-                { lat: 20.630688, lng: -87.082711, abrev: 'PCN', idEquipo: 0, nombre: 'PLAYA DEL CARMEN' }, //pcn
-                { lat: 20.355993, lng: -87.375020, abrev: 'CHY', idEquipo: 0, nombre: 'CHEMUYIL' } //CHY
+                { lat: 21.068863, lng: -86.846417, abrev: 'NIZ', idEquipo: 153, nombre: 'NIZUC' }, //niz
+                { lat: 20.994938, lng: -86.887671, abrev: 'PTP', idEquipo: 157, nombre: 'PETEMPICH' }, //ptp
+                { lat: 20.984939, lng: -86.882867, abrev: 'MPA', idEquipo: 155, nombre: 'MOON PALACE' }, //mpl
+                { lat: 20.630688, lng: -87.082711, abrev: 'PCN', idEquipo: 154, nombre: 'PLAYA DEL CARMEN' }, //pcn
+                { lat: 20.355993, lng: -87.375020, abrev: 'CHY', idEquipo: 156, nombre: 'CHEMUYIL' } //CHY
             ],
             TinNiz: {
                 path: [
@@ -219,7 +214,8 @@ export default {
         test(idEquipo) {
             if (idEquipo > 0) {
                 console.log('se presiona el boton');
-                window.location.href = "http://192.168.1.78:5173/equipo/17";
+                this.router.push('/equipo/' + idEquipo )
+
             } else {
                 console.log('no hay idEquipo');
             }

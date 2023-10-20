@@ -60,13 +60,23 @@ export const useTaskStore = defineStore('taskStore', {
         },
         async getFilesGabinete() {
             try {
-                const res4 = await fetch(this.ipAddress + '/gabinetes/' + this.currentRack)
+                const res4 = await fetch(this.ipAddress + '/archivos/' + this.currentRack)
+                const data4 = await res4.json()
+                this.gabineteFiles =  data4
+            } catch (error) {
+                this.dbConnection = false
+                console.log('Error conexion DB')
+            }
+        },
+        async getInfoGabinete() {
+            try {
+                const res4 = await fetch(this.ipAddress + '/gabinete/' + this.currentRack)
                 const data4 = await res4.json()
 
-                console.log('getFilesGabionte');
-                console.log(data4);
+           
+                this.currentSubestacion.alias = data4[0].abrev
+                this.currentRackName = data4[0].etiqueta
 
-                this.gabineteFiles = data4[0]
             } catch (error) {
                 this.dbConnection = false
                 console.log('Error conexion DB')

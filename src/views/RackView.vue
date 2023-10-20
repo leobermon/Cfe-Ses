@@ -4,25 +4,25 @@
         <div class="grid  grid-cols-12 py-4 container " style="background-color:#949494; border-radius:10px 10px 0px 0px">
 
             <div class="col-span-10 ">
-                <h1 CLASS="text-3xl text-cursive font-medium ">SUBESTACION TINTAL </h1>
-
-            </div>
+                <h1 class="md:text-3xl text-2xl text-cursive font-medium ">SUBESTACION {{ taskStore2.currentSubestacion.alias  }}  </h1>
+            </div> 
             <div class="text-right col-span-2 ">
                 <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 ">
                     {{ taskStore2.currentRackName }}
                 </h5>
             </div>
+            
+            <div class="col-span-12 " v-if="taskStore2.gabineteFiles && taskStore2.gabineteFiles.length > 0 ">
 
-            <div class="col-span-12 " v-if="taskStore2.gabineteFiles ">
-                {{ taskStore2.gabineteFiles }}
-                <a type="button" target=”_blank”
-                    :href="taskStore2.ipLocalServ + '/src/assets/PDF/' + taskStore2.gabineteFiles.archivo + '.pdf'"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <a v-for="(file, index) in taskStore2.gabineteFiles" :id="index" type="button" target=”_blank”
+                    :href="taskStore2.ipLocalServ + '/src/assets/PDF/' + file.id + '.pdf'"
+                    class="px-1 py-2 m-1 text-xs font-medium text-center inline-flex items-center text-gray bg-white  rounded-lg hover:bg-white-500  focus:ring-4 focus:outline-none ">
 
-                    Diagrama de Proteccion, Medicion y Control
+                    <img src="../assets/img/icons/3997608.png" class="w-5 h-5"  alt="">
+
+                {{ file.nombre_archivo }}
 
                 </a>
-
             </div>
 
         </div>
@@ -107,6 +107,7 @@ export default {
 
         taskStore.getEquipos();
         taskStore.getFilesGabinete();
+        taskStore.getInfoGabinete();
     },
     data() {
         return {
