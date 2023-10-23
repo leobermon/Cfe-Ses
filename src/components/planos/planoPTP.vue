@@ -44,8 +44,8 @@
                         <td class="px-3 py-4"> </td>
                         <td class="px-3 py-4"> </td>
                         <td class="px-3 py-4 "></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(288, 'D15', 'cargadores')"> D15 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                          > D15 </td>
                         <td class="px-1 bg-gray-400"></td>
                         <td class="rotate-45" rowspan="3" colspan="5"> Bodega 1 </td>
                         <td class="px-1 bg-gray-400"></td>
@@ -61,11 +61,11 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(281, 'C14', 'interruptores')"> C14 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                            > C14 </td>
                         <td class="px-3 py-4 "></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(287, 'D14', 'cargadores')"> D14 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                           > D14 </td>
                         <td class="px-1 bg-gray-400"></td>
 
                         <td class="px-1 bg-gray-400"></td>
@@ -80,13 +80,13 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(272, 'B13')"> B13 </td>
+                        @click="verGabinete(272, 'B13')" > B13 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(280, 'C12', 'interruptores')"> C13 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                          > C13 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(286, 'D13', 'cargadores')"> D13 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                          > D13 </td>
                         <td class="px-1 bg-gray-400"></td>
 
                         <td class="px-1 bg-gray-400"></td>
@@ -101,13 +101,13 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(271, 'B12')"> B12 </td>
+                        @click="verGabinete(271, 'B12')"> B12 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(279, 'C12', 'interruptores')"> C12 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                          > C12 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(285, 'D12', 'cargadores')"> D12 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                         > D12 </td>
                         <td class="px-1 bg-gray-400 border-b-8 border-gray-400"></td>
                         <td class="px-1 border-b-8 border-gray-400"></td>
                         <td class="px-1 border-b-8 border-gray-400"></td>
@@ -126,7 +126,7 @@
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(270, 'B11')"> B11 </td>
+                        @click="verGabinete(270, 'B11')" > B11 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
@@ -146,11 +146,11 @@
                         <td></td>
                         <td class="px-1 bg-gray-400 "> </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(263, 'A10')"> A10 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                         > A10 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(269, 'B10')"> B10 </td>
+                        @click="verGabinete(269, 'B10')"> B10 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
@@ -170,11 +170,11 @@
                         <td></td>
                         <td class="px-1 bg-gray-400 "> </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(262, 'A9')"> A9 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                         > A9 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(268, 'B9')"> B9 </td>
+                        @click="verGabinete(268, 'B9')" > B9 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
@@ -192,14 +192,14 @@
                         <td></td>
                         <td class="px-1 bg-gray-400 "> </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(261, 'A8')"> A8 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                         > A8 </td>
                         <td class="px-3 py-4"></td>
                         
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(278, 'C8', 'interruptores')"> C8 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                          > C8 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-1 bg-gray-400"></td>
@@ -220,8 +220,8 @@
                         
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(277, 'C7', 'interruptores')"> C7 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                       > C7 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-1 bg-gray-400"></td>
@@ -244,8 +244,8 @@
                         
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                        @click="verGabinete(276, 'B6', 'interruptores')"> C6 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                    > C6 </td>
                         <td class="px-3 py-4"></td>
                         
                         <td class="px-3 py-4"></td>
@@ -260,8 +260,8 @@
                         <td></td>
                         <td class="px-1 bg-gray-400 "> </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(260, 'A5')"> A5 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                       > A5 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
@@ -279,11 +279,11 @@
                         <td></td>
                         <td class="px-1 bg-gray-400 "> </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(259, 'A4')"> A4 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                       > A4 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(267, 'B4')"> B4 </td>
+                        @click="verGabinete(267, 'B4')"   > B4 </td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
                         <td class="px-3 py-4"></td>
@@ -299,17 +299,17 @@
                         <td></td>
                         <td class="px-1 bg-gray-400 "> </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(258, 'A3')"> A3 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                         > A3 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(266, 'B3')"> B3 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                        > B3 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(275, 'C3', 'interruptores')"> C3 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                       > C3 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(284, 'D3', 'cargadores')"> D3 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                        > D3 </td>
                         <td class="px-1 bg-gray-400"></td>
 
                         <td class="px-1 bg-gray-400"></td>
@@ -321,17 +321,17 @@
                         <td></td>
                         <td class="px-1 bg-gray-400 "> </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(257, 'A2')"> A2 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                       > A2 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(265, 'B2')"> B2 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                        > B2 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(274, 'C2', 'interruptores')"> C2 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                       > C2 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(283, 'D2', 'cargadores')"> D2 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                        > D2 </td>
                         <td class="px-1 bg-gray-400"></td>
                         <td class="px-3 py-4" colspan="5"></td>
                         <td class="px-1 bg-gray-400"></td>
@@ -343,17 +343,17 @@
                         <td></td>
                         <td class="px-1 bg-gray-400 "> </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(256, 'A1')"> A1 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                         > A1 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(264, 'B1')"> B1 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                         > B1 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(273, 'C1', 'interruptores')"> C1 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                         > C1 </td>
                         <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(282, 'D1', 'cargadores')"> D1 </td>
+                        <td class="px-3 py-4 border-solid border-4 border-gray-500 font-bold text-center "
+                        > D1 </td>
                         <td class="px-1 bg-gray-400"></td>
                         <td class="px-3 py-4" colspan="5"></td>
                         <td class="px-1 bg-gray-400"></td>

@@ -70,10 +70,10 @@
                         <td class="px-1 py-1 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C1 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B1 </td>
+                            @click="verGabinete(34, 'B1')"> B1 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> A1 </td>
+                            @click="verGabinete(1, 'A1')"> A1 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
                         <td class=""></td>
@@ -93,10 +93,10 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C2 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B2 </td>
+                            @click="verGabinete(35, 'B2')"> B2 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> A2 </td>
+                            @click="verGabinete(2, 'A2')"> A2 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
                         <td class=""></td>
@@ -115,10 +115,10 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C3 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B3 </td>
+                            @click="verGabinete(36, 'B3')"> B3 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> A3 </td>
+                            @click="verGabinete(3, 'A3')"> A3 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
                         <td class=""></td>
@@ -137,10 +137,10 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C4 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B4 </td>
+                            @click="verGabinete(37, 'B4')"> B4 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> A4 </td>
+                            @click="verGabinete(4, 'A4')"> A4 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
                         <td class=""></td>
@@ -159,10 +159,10 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C5 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B5 </td>
+                            @click="verGabinete(38, 'B5')"> B5 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> A5 </td>
+                            @click="verGabinete(5, 'A5')"> A5 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
                         <td class="bg-gray-400"></td>
@@ -181,10 +181,10 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C6 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B6 </td>
+                            @click="verGabinete(255, 'B6')"> B6 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> A6 </td>
+                            @click="verGabinete(145, 'A6')"> A6 </td>
                         <td class=""></td>
                         <td ></td>
                         <td class=""></td>
@@ -203,10 +203,10 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-100 "> C7 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B7 </td>
+                            @click="verGabinete(294, 'B7')"> B7 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> A7 </td>
+                            @click="verGabinete(7, 'A7')"> A7 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
                         <td class=""></td>
@@ -214,9 +214,11 @@
                         <td class="bg-gray-400"></td>
                         <td class="bg-gray-400"></td>
                         <td class=""></td>
-                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> D14 </td>
+                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
+                        @click="verGabinete(293, 'D14')"   > D14 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
+
                     </tr>
 
                     <tr>
@@ -225,10 +227,10 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C8 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B8 </td>
+                            @click="verGabinete(295, 'B8')"> B8 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> A8 </td>
+                            @click="verGabinete(296, 'A8')"> A8 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
                         <td class=""></td>
@@ -236,7 +238,8 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> D10 </td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> D11 </td>
                         <td ></td>
-                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> D15 </td>
+                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
+                        @click="verGabinete(292, 'D15')"   > D15 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
                     </tr>
@@ -247,7 +250,7 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C9 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B9 </td>
+                            @click="verGabinete(42, 'B9')"> B9 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> A9 </td>
                         <td class=""></td>
@@ -267,7 +270,7 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C10 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B10 </td>
+                            @click="verGabinete(297, 'B10')"> B10 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> A10 </td>
                         <td class=""></td>
@@ -290,7 +293,7 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C11 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-cyan-100 cursor-pointer hover:bg-cyan-300"
-                            @click="verGabinete(145, 'D15', 'cargadores')"> B11 </td>
+                            @click="verGabinete(298, 'B11')"> B11 </td>
                         <td class=""></td>
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> A11 </td>
                         <td class=""></td>
@@ -415,10 +418,10 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> A17 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
+                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> D21 </td>
+                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> D22 </td>
                         <td ></td>
-                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C21 </td>
-                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C22 </td>
-                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C23 </td>
+                        <td class="bg-gray-400"></td>
                         <td ></td>
                         <td ></td>
                         <td ></td>
@@ -437,8 +440,9 @@
                         <td ></td>
                         <td ></td>
                         <td ></td>
-                        <td ></td>
-                        <td ></td>
+                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> D23 </td>
+
+                        <td class="bg-gray-400"></td>
                         <td ></td>
                         <td ></td>
                         <td ></td>
@@ -455,10 +459,10 @@
                         <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> A19 </td>
                         <td class=""></td>
                         <td class="bg-gray-400"></td>
+                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> D25 </td>
+                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> D24 </td>
                         <td ></td>
-                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C24 </td>
-                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C25 </td>
-                        <td class="p-2 border-solid border-4 border-gray-500 font-bold text-center bg-gray-50 "> C26 </td>
+                        <td class="bg-gray-400"></td>
                         <td ></td>
                         <td ></td>
                         <td ></td>
@@ -479,9 +483,9 @@
                         <td class="bg-gray-400"></td>
                         <td class="bg-gray-400"></td>
                         <td class="bg-gray-400"></td>
-                        <td class="bg-gray-400"></td>
-                        <td class="bg-gray-400"></td>
-                        <td class="bg-gray-400"></td>
+                        <td class=""></td>
+                        <td class=""></td>
+                        <td class=""></td>
                         <td class="bg-gray-400"></td>
                     </tr>
 

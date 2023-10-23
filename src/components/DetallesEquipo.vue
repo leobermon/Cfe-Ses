@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- Lista de detalles, web -->
-        <div class="hidden md:block py-1">
+        <div class=" md:block py-1">
 
 
 

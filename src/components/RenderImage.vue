@@ -1,6 +1,10 @@
 <template>
-    <img v-if="hasImg" :src="logo"  @error="imgUrlAlt">
-    <img v-else :src="photo1"  @error="imgUrlAlt">
+    <!-- <img v-if="hasImg" :src="logo"  @error="imgUrlAlt"> -->
+    <!-- <img v-else :src="photo1"  @error="imgUrlAlt"> -->
+    
+    <img v-if="hasImg" v-lazy="logo" />
+    <img v-else v-lazy="photo1" />
+
 </template>
   
 <script setup>
