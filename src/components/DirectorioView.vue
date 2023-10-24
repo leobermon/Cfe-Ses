@@ -1,10 +1,100 @@
 <template>
     <div class="container py-4">
 
-        <p class=" border-gray-300">
-        <h1>Directorio Telefonico</h1>
-        </p>
+        <h1 class="mb-2 text-2xl text-center font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-white">DIRECTORIO TELEFONICO</h1>
 
+
+        <div class="hidden md:block">
+
+<div class="grid mb-2 border border-gray-200 rounded-lg shadow-sm md:grid-cols-4">
+    <figure
+        class="flex flex-col items-center justify-center p-2 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r  ">
+        <blockquote class="max-w-2xl mx-auto text-gray-500 lg:mb-2 ">
+            <p class="">CENACE</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <div class="space-y-0.5 font-medium  text-left">
+                <div class="text-2xl text-gray-500 "> 055 + </div>
+            </div>
+        </figcaption>
+    </figure>
+
+    <figure
+        class="flex flex-col items-center justify-center p-2 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r  ">
+        <blockquote class="max-w-2xl mx-auto text-gray-500 lg:mb-2 ">
+            <p class="">DISTRIBUCION</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <div class="space-y-0.5 font-medium  text-left">
+                <div class="text-2xl text-gray-500 "> 064 + </div>
+            </div>
+        </figcaption>
+    </figure>
+
+    <figure
+        class="flex flex-col items-center justify-center p-2 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r ">
+        <blockquote class="max-w-2xl mx-auto text-gray-500 lg:mb-2 ">
+            <p class="">SUMINISTRO</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <div class="space-y-0.5 font-medium  text-left">
+                <div class="text-2xl text-gray-500 "> 064 + </div>
+            </div>
+        </figcaption>
+    </figure>
+
+    <figure
+        class="flex flex-col items-center justify-center p-2 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r ">
+        <blockquote class="max-w-2xl mx-auto text-gray-500 lg:mb-2 ">
+
+            <p class="">CONSTRUCCION</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <div class="space-y-0.5 font-medium text-left">
+                <div class="text-2xl text-gray-500 "> 030 + </div>
+            </div>
+        </figcaption>
+    </figure>
+
+
+</div>
+
+</div>
+
+<!-- VISTA DE LAS EXTENSIONES EN MOBIL  -->
+<div class=" md:hidden">
+
+<div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+                <table class="min-w-full text-left text-sm font-light">
+                    <tbody>
+                        <tr class="border-b ">
+                            <td class="whitespace-nowrap px-6 py-1 font-medium">DISTRIBUCION</td>
+                            <td class="whitespace-nowrap px-6 py-1">064 +</td>
+                        </tr>
+                        <tr class="border-b ">
+                            <td class="whitespace-nowrap px-6 py-1 font-medium">SUMINISTRO</td>
+                            <td class="whitespace-nowrap px-6 py-1">064 +</td>
+                        </tr>
+                        <tr class="border-b ">
+                            <td class="whitespace-nowrap px-6 py-1 font-medium">CENACE</td>
+                            <td class="whitespace-nowrap px-6 py-1">055 +</td>
+                        </tr>
+                        <tr class="border-b ">
+                            <td class="whitespace-nowrap px-6 py-1 font-medium">CONSTRUCCION</td>
+                            <td class="whitespace-nowrap px-6 py-1">030 +</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
 
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <div class="flex items-center justify-between pb-5">
@@ -20,22 +110,20 @@
                         </svg>
                     </div>
                     <input type="text" v-model="searchText" id="table-search"
-                        class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500  "
+                        class=" block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500  "
                         placeholder="Buscar Por nombre, puesto o extension ">
                 </div>
             </div>
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-100  ">
                     <tr>
-
-
                         <th scope="col" class="px-6 py-3">
                             EXT
                         </th>
                         <th scope="col" class="px-6 py-3">
                             PUESTO
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="px-6 py-3 hidden md:block">
                             DEPTO
                         </th>
                     </tr>
@@ -48,11 +136,14 @@
                         <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap ">
                             <p class="text-lg font-bold"> {{ subs.extension }} </p>
                         </th>
-                        <td class="px-4 py-4">
+                        <td class="px-1 py-1">
+                            
+                            <p class="md:hidden" > {{ subs.departamento }} </p>
+
                             <p class="font-semibold "> {{ subs.puesto }} </p>
                             <p class="text-xs"> {{ subs.nombre }} {{ subs.apellido }} </p>
                         </td>
-                        <td>
+                        <td class="hidden md:block">
                             <p> {{ subs.departamento }} </p>
                             <p class="text-xs"> {{ subs.zona }} </p>
 
