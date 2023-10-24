@@ -18,6 +18,9 @@ import enlacesOtn from '../components/maps/enlacesOtn.vue'
 import enlacesEci from '../components/maps/enlacesEci.vue'
 
 
+import qrs from '../components/qrs/petempich.vue'
+import equiposr3 from '../components/EquiposR3.vue'
+
 
 import EquipoView from '../views/EquipoView.vue'
 
@@ -25,7 +28,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/', 
       name: 'home',
       component: MenuInicio
     },
@@ -34,7 +37,16 @@ const router = createRouter({
       name: "subestaciones",
       component: ListaSubestaciones
     },
-   
+    {
+      path: "/qrs/:id",
+      name: "qrs",
+      component: qrs
+    },
+    {
+      path: "/equiposr3",
+      name: "equiposr3",
+      component: equiposr3
+    },
     {
       path: "/subestacion/:idSe",
       props: true,
