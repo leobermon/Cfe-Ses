@@ -25,7 +25,7 @@
           class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('subestaciones')">
           <img src="../assets/img/se.jpg" class="h-12 md:h-20 w-30" />
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">SUBESTACIONES </h5>
+          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">SUBESTACIONES </h5>
           <p class="text-sm">Lista de Subestaciones CFE Transmision</p>
         </div>
 
@@ -33,15 +33,15 @@
           class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('directorio')">
           <img src="../assets/img/directorio.svg" class="h-20 w-30" />
-          <h6 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 ">DIRECTORIO TELEFONICO</h6>
-          <p class="text-sm ">Directorio con las extensiones de telefono , zona ZTCNC</p>
+          <h6 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">DIRECTORIO TELEFONICO</h6>
+          <p class="text-sm ">Directorio con las extensiones de telefono</p>
         </div>
 
         <div
           class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('enlacesOtn')">
           <img src="../assets/img/otn.svg" class="h-20 w-30" />
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OTN </h5>
+          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OTN </h5>
           <p class="text-sm ">Mapa con los enlaces de quipos OTN</p>
         </div>
 
@@ -49,7 +49,7 @@
           class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('enlacesEci')">
           <img src="../assets/img/eci.svg" class="h-20 w-30" />
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES ECI </h5>
+          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES ECI </h5>
           <p class="text-sm ">Mapa con los enlaces de quipos ECI</p>
         </div>
 
@@ -57,9 +57,27 @@
           class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('enlacesOplat')">
           <img src="../assets/img/oplat.svg" class="h-20 w-30" />
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OPLAT </h5>
+          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OPLAT </h5>
           <p class="text-sm">Mapa con los enlaces de quipos ECI</p>
         </div>
+
+        <div
+          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeRoute('equiposr3')">
+          <img src="../assets/img/equipos.svg" class="h-20 w-30" />
+          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">EQUIPOS R3 </h5>
+          <p class="text-sm">Lista de equipos comunicaciones</p>
+        </div>
+
+        <div
+          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeLink()">
+          <img src="../assets/img/rdo.svg" class="h-20 w-30" />
+          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">RDO ZT CNC</h5>
+          <p class="text-sm">Lista de equipos comunicaciones</p>
+        </div>
+
+
 
       </div>
     </div>
@@ -67,9 +85,9 @@
 </template>
 
 <script>
+
 import { useRouter } from "vue-router";
 import { useTaskStore } from '../stores/taskStore';
-
 
 export default {
   data() {
@@ -80,16 +98,14 @@ export default {
   },
   methods: {
     changeRoute(rout) {
-
-      console.log('click en funcion');
       this.router.push(rout)
     },
-    mandarALink() {
-      window.location.href = "http://192.168.1.78:5173/src/assets/enlaces/tin-niz2.svg";
+    changeLink(link){
+      //this.router.replace({ path: link })
+      //this.router.go(link); //unifilar 
+      this.window.location.href('/src/assets/diagramas/rdo.svg')
     }
   }
 }
 
 </script>
-
-

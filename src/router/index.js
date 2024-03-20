@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-
 import PageNotFound from '../components/PageNotFound.vue'
 import Directorioview from  '../components/Directorioview.vue'
 
@@ -17,10 +16,9 @@ import enlacesOplat from '../components/maps/enlacesOplat.vue'
 import enlacesOtn from '../components/maps/enlacesOtn.vue'
 import enlacesEci from '../components/maps/enlacesEci.vue'
 
-
-import qrs from '../components/qrs/petempich.vue'
+import qrs from '../components/qrs/chemuyil.vue'
 import equiposr3 from '../components/EquiposR3.vue'
-
+import direccionesip from '../components/DireccionesIp.vue'
 
 import EquipoView from '../views/EquipoView.vue'
 
@@ -46,6 +44,11 @@ const router = createRouter({
       path: "/equiposr3",
       name: "equiposr3",
       component: equiposr3
+    },
+    {
+      path: "/direccionesip",
+      name: "direccionesip",
+      component: direccionesip
     },
     {
       path: "/subestacion/:idSe",

@@ -72,20 +72,26 @@
 </template> 
 
 <script >
+import { useTaskStore } from '../stores/taskStore';
+
+
+
 
 export default {
 
     data() {
         return {
             searchText: '',
-            equipos: []
+            equipos: [],
+            taskstore: useTaskStore()
         }
     },
     methods: {
         async getEquiposR3() {
             try {
                 //obtenemos detalles equipo
-                const res = await fetch('http://192.168.1.78:5000/equiposr3')
+                const res = await fetch(this.taskstore.ipAddress + '/equiposr3')
+
 
                 const detalles = await res.json()
                 console.log('resultado');

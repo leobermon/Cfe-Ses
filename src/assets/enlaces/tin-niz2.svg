@@ -25,9 +25,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="7.4022665"
-     inkscape:cx="444.52601"
-     inkscape:cy="459.11614"
+     inkscape:zoom="0.92680617"
+     inkscape:cx="588.04097"
+     inkscape:cy="433.20817"
      inkscape:window-width="2048"
      inkscape:window-height="1014"
      inkscape:window-x="0"
@@ -907,9 +907,9 @@
        inkscape:label="text2"><tspan
          x="345.73813"
          y="353.38162"
-         id="tspan5"><tspan
+         id="tspan3"><tspan
            style="font-size:8px"
-           id="tspan1"> TIN-73480-NIZ</tspan></tspan></text><text
+           id="tspan2"> TIN-73480-NIZ</tspan></tspan></text><text
        xml:space="preserve"
        style="white-space:pre;inline-size:111.635;display:inline;fill:#800080"
        x="345.73813"
@@ -921,9 +921,9 @@
        inkscape:label="text2"><tspan
          x="345.73813"
          y="353.38162"
-         id="tspan7"><tspan
+         id="tspan5"><tspan
            style="font-weight:bold;font-size:8px;-inkscape-font-specification:'sans-serif Bold'"
-           id="tspan6"> PTP-73780-NIZ</tspan></tspan></text><text
+           id="tspan4"> PTP-73780-NIZ</tspan></tspan></text><text
        xml:space="preserve"
        style="font-size:10.5107px;white-space:pre;inline-size:111.635;display:inline;fill:#800080"
        x="345.73813"
@@ -935,9 +935,9 @@
        inkscape:label="text2"><tspan
          x="345.73813"
          y="353.38162"
-         id="tspan9"><tspan
+         id="tspan7"><tspan
            style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-           id="tspan8">CHY-73790-PCN</tspan></tspan></text><path
+           id="tspan6">CHY-73790-PCN</tspan></tspan></text><path
        style="fill:#800080;stroke-width:0.236787"
        d="m 215.76499,392.45099 -0.88012,-1.02455 173.0005,-54.52972 c 95.15024,-29.99133 173.17689,-54.58818 173.39257,-54.65974 0.43232,-0.14372 2.24717,1.69737 1.90097,1.9281 -0.11763,0.075 -77.8902,24.62731 -172.8284,54.55333 -94.93811,29.92599 -172.86015,54.48881 -173.16002,54.58398 -0.41621,0.13097 -0.75383,-0.0688 -1.4255,-0.8514 z"
        id="path17" /><path
@@ -1118,7 +1118,7 @@
        x="282.5314"
        y="673.4826" /><a
        id="a22"
-       xlink:href="http://192.168.1.78:5173/equipo/17"><image
+       xlink:href="http://10.28.80.118:8080/equipo/17"><image
          width="44.221897"
          height="13.123477"
          preserveAspectRatio="none"

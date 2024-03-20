@@ -101,7 +101,7 @@ export default {
             try {
                 console.log('hola: ' + this.rackId);
                 //obtenemos detalles equipo
-                const res = await fetch('http://192.168.1.69:5000/interruptores/'+this.rackId)
+                const res = await fetch(this.taskStore2.ipAddress + this.rackId)
 
                 const detalles = await res.json()
                 console.log('resultado');
