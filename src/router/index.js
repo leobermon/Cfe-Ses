@@ -25,7 +25,8 @@ import cancun from '../components/ultimaMilla/cancun.vue'
 
 
 
-import qrs from '../components/qrs/chemuyil.vue'
+//import qrs from '../components/qrs/chemuyil.vue'
+import fo from '../views/fo.vue'
 import equiposr3 from '../components/EquiposR3.vue'
 import direccionesip from '../components/DireccionesIp.vue'
 
@@ -46,15 +47,21 @@ const router = createRouter({
       name: "subestaciones",
       component: ListaSubestaciones
     },
-    {
-      path: "/qrs/:id",
-      name: "qrs",
-      component: qrs
-    },
+    // {
+    //   path: "/qrs/:id",
+    //   name: "qrs",
+    //   component: qrs
+    // },
     {
       path: "/equiposr3",
       name: "equiposr3",
       component: equiposr3
+    },
+    {
+      path: "/fo/:fo",
+      props:true,
+      name: "fo",
+      component: fo
     },
     {
       path: "/direccionesip",
