@@ -1,7 +1,7 @@
 <template>
     <header class=" top-0 shadow-lg bg-stone-50 ">
       <nav
-        class="container flex items-center gap-4  py-6"
+        class="container flex items-center gap-2  py-3"
       >
         <RouterLink :to="{ name: 'home' }">
           <div class="flex items-center gap-3">
@@ -29,7 +29,6 @@
   
   <script >
   import { useRouter } from "vue-router";
-
   
   //asi se cambia la variable de mostrar
   export default {

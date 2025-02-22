@@ -63,13 +63,10 @@
 
 <script >
 
-import { filter } from 'lodash';
 import { useRouter } from 'vue-router'
-import axios from "axios";
 import { useTaskStore } from '../stores/taskStore';
 
 export default {
-    
     data() {
         return {
             router: useRouter(),
@@ -102,9 +99,4 @@ export default {
     }
 }
 
-
-
-
-
 </script>
-

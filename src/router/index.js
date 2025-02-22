@@ -11,14 +11,25 @@ import UnifilaresView from '../views/UnifilaresView.vue'
 import RackView from '../views/RackView.vue'
 import CargadoresView from '../views/CargadoresView.vue'
 import InterruptoresView from '../views/InterruptoresView.vue'
+import ListaUltimaMilla from '../views/ListaUltimaMilla.vue'
+import PatchNotes from '../views/patchnotes.vue'
+
 
 import enlacesOplat from '../components/maps/enlacesOplat.vue'
 import enlacesOtn from '../components/maps/enlacesOtn.vue'
 import enlacesEci from '../components/maps/enlacesEci.vue'
 
+import ultimaMillaTum_Age from '../components/ultimaMilla/tulum-agencia.vue' 
+import tulumPcn from '../components/ultimaMilla/tulum-pcn.vue' 
+import cancun from '../components/ultimaMilla/cancun.vue'
+
+
+
 import qrs from '../components/qrs/chemuyil.vue'
 import equiposr3 from '../components/EquiposR3.vue'
 import direccionesip from '../components/DireccionesIp.vue'
+
+//agregar componente de ultima milla 
 
 import EquipoView from '../views/EquipoView.vue'
 
@@ -89,6 +100,12 @@ const router = createRouter({
       component: enlacesEci
     },
     {
+      path: "/ultimamilla",
+      name: "",
+      component: ListaUltimaMilla
+    },
+    
+    {
       path: "/cargadores/:rackId",
       props: true,
       name: "",
@@ -111,6 +128,28 @@ const router = createRouter({
       name: "",
       component: Directorioview
     },
+    // ultimas millas 
+    {
+      path: "/ultimaMillaTulumAgencia",
+      name: "",
+      component: ultimaMillaTum_Age
+    },
+    {
+      path: "/tulumPcn",
+      name: "",
+      component: tulumPcn
+    },
+    {
+      path: "/cancun",
+      name: "",
+      component: cancun
+    },
+    {
+      path: "/patchnotes",
+      name: "",
+      component: PatchNotes
+    },
+   
     
     {
       path: "/:pathMatch(.*)*",

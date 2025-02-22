@@ -19,63 +19,156 @@
       </div>
     </div>
     <div v-else>
-      <div class="grid gap-2 md:grid-cols-2 py-4 self-center place-content-center ">
+
+
+
+      <div class="grid gap-2 md:grid-cols-2 py-2 self-center place-content-center ">
 
         <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('subestaciones')">
-          <img src="../assets/img/se.jpg" class="h-12 md:h-20 w-30" />
-          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">SUBESTACIONES </h5>
-          <p class="text-sm">Lista de Subestaciones CFE Transmision</p>
+
+          <div class="col-span-2 ">
+            <img src="../assets/img/se.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h6 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">SUBESTACIONES</h6>
+            <p class="text-sm ">Vista de racks en la caseta de control </p>
+          </div>
+
+
         </div>
 
         <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('directorio')">
-          <img src="../assets/img/directorio.svg" class="h-20 w-30" />
-          <h6 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">DIRECTORIO TELEFONICO</h6>
-          <p class="text-sm ">Directorio con las extensiones de telefono</p>
+
+          <div class="col-span-2 ">
+            <img src="../assets/img/directorio.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h6 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">DIRECTORIO TELEFONICO</h6>
+            <p class="text-sm ">Directorio con las extensiones de telefono</p>
+          </div>
+
+
         </div>
 
         <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('enlacesOtn')">
-          <img src="../assets/img/otn.svg" class="h-20 w-30" />
-          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OTN </h5>
-          <p class="text-sm ">Mapa con los enlaces de quipos OTN</p>
+
+          <div class="col-span-2 ">
+            <img src="../assets/img/otn.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h6 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">ENLACES OTN </h6>
+            <p class="text-sm ">Mapa con los enlaces de quipos OTN</p>
+          </div>
         </div>
 
         <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('enlacesEci')">
-          <img src="../assets/img/eci.svg" class="h-20 w-30" />
-          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES ECI </h5>
-          <p class="text-sm ">Mapa con los enlaces de quipos ECI</p>
+
+          <div class="col-span-2 ">
+            <img src="../assets/img/eci.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h5 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">ENLACES ECI </h5>
+            <p class="text-sm ">Mapa con los enlaces de quipos ECI</p>
+          </div>
         </div>
 
         <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('enlacesOplat')">
-          <img src="../assets/img/oplat.svg" class="h-20 w-30" />
-          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">ENLACES OPLAT </h5>
-          <p class="text-sm">Mapa con los enlaces de quipos ECI</p>
+
+          <div class="col-span-2 ">
+            <img src="../assets/img/oplat.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h5 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">ENLACES OPLAT </h5>
+            <p class="text-sm">Mapa con los enlaces de quipos OPLAT</p>
+          </div>
         </div>
 
         <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeRoute('equiposr3')">
-          <img src="../assets/img/equipos.svg" class="h-20 w-30" />
-          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">EQUIPOS R3 </h5>
-          <p class="text-sm">Lista de equipos comunicaciones</p>
+
+          <div class="col-span-2 ">
+            <img src="../assets/img/equipos.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h5 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">EQUIPOS R3 </h5>
+            <p class="text-sm">Lista de equipos comunicaciones</p>
+          </div>
         </div>
 
         <div
-          class="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
           @click="changeLink()">
-          <img src="../assets/img/rdo.svg" class="h-20 w-30" />
-          <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">RDO ZT CNC</h5>
-          <p class="text-sm">Lista de equipos comunicaciones</p>
+
+          <div class="col-span-2 ">
+            <img src="../assets/img/rdo.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h5 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">DIAGRAMA RDO ZTCNC</h5>
+            <p class="text-sm">Lista de equipos comunicaciones</p>
+          </div>
         </div>
+
+        <div
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeLink2()">
+
+          <div class="col-span-2 ">
+            <img src="../assets/img/enlacesfo.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h5 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">ENLACES F.O GRTP</h5>
+            <p class="text-sm">Diagrama de enlaces y las rutas de fibra optica  </p>
+          </div>
+        </div>
+
+        <div
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeRoute('ultimamilla')">
+
+          <div class="col-span-2 ">
+            <img src="../assets/img/ultimamilla.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h5 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">ULTIMA MILLA</h5>
+            <p class="text-sm">Mapas que muestrar la ruta de las ultimas millas </p>
+          </div>
+        </div>
+
+        <div
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeLink3()">
+          <div class="col-span-2 ">
+            <img src="../assets/img/utr.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h5 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">ENLACES DE UTRs</h5>
+            <p class="text-sm">Diagrama con los enlaces de UTR </p>
+          </div>
+        </div>
+
+        <div
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeRoute('direccionesip')">
+          <div class="col-span-2 ">
+            <img src="../assets/img/ip.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h5 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">IP EQUIPOS</h5>
+            <p class="text-sm"> Lista de direcciones IP de equipos </p>
+          </div>
+        </div>
+
 
 
 
@@ -100,10 +193,18 @@ export default {
     changeRoute(rout) {
       this.router.push(rout)
     },
-    changeLink(link){
+    changeLink() {
+      window.open('http://localhost:5173/src/assets/diagramas/rdo.svg', '_blank')
+    },
+    changeLink2() {
       //this.router.replace({ path: link })
       //this.router.go(link); //unifilar 
-      this.window.location.href('/src/assets/diagramas/rdo.svg')
+      window.open('http://localhost:5173/src/assets/diagramas/visio.svg', '_blank')
+    },
+    changeLink3() {
+      //this.router.replace({ path: link })
+      //this.router.go(link); //unifilar 
+      window.open('http://localhost:5173/src/assets/diagramas/utr.svg', '_blank')
     }
   }
 }

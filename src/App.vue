@@ -1,9 +1,8 @@
 <template>
   <div class="flex flex-col min-h-screen font-Roboto bg-weather-primary">
-    <Header />
+    <Header/>
 
     <!-- Router Error -->
-
 
 
     <div v-if="!taskStore.dbConnection"
@@ -22,7 +21,6 @@
     </div>
 
 
-
     <RouterView  class="mb-auto" />
 
     <Footer/>
@@ -31,7 +29,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { RouterView } from "vue-router";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";

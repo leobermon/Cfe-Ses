@@ -1,7 +1,7 @@
 <template>
     <div class="container py-4">
 
-        <h1 class="mb-2 text-2xl text-center font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-white">
+        <h1 class="mb-2 text-2xl text-center font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl ">
             DIRECTORIO TELEFONICO</h1>
 
             <div>
@@ -74,7 +74,7 @@
 
             <div class="flex flex-col">
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                    <div class="inline-block min-w-full py-1 sm:px-6 lg:px-8">
                         <div class="overflow-hidden">
                             <table class="min-w-full text-left text-sm font-light">
                                 <tbody>

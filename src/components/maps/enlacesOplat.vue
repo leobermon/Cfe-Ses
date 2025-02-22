@@ -287,7 +287,7 @@ export default {
 
             estilosMapa: [
                 { "width": (window.innerWidth <= 768) ? "100%" : "80%" },
-                { "height": (window.innerHeight - 300) + 'px' },
+                { "height": (window.innerHeight - 180) + 'px' },
                 {
                     "featureType": "poi.business",
                     "stylers": [{ "visibility": "off" }],

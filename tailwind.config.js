@@ -7,7 +7,8 @@ module.exports = {
         "cc-secondary": "#F9FAFB",
         "cc-official": "#00804f",
         "gabineteColor": "#d2cdc0",
-        "gabineteText": "#dbd9d0"
+        "gabineteText": "#dbd9d0",
+        "morado":"#9d03fc"
       },
     },
     fontFamily: {

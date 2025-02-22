@@ -1,0 +1,6 @@
+para iniciar la aplicacion en puerto espcifico usamos 
+
+
+
+
+npm run dev -- --port 8080

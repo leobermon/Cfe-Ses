@@ -72,7 +72,7 @@
 
 
 
-            <center>
+            <center class="hidden md:block">
 
                 <div class="">
 
@@ -299,7 +299,7 @@ export default {
 
             estilosMapa: [
                 { "width": "100%" },
-                { "height": (window.innerHeight - 300) + 'px' },
+                { "height": (window.innerHeight - 180) + 'px' },
                 {
                     "featureType": "poi.business",
                     "stylers": [{ "visibility": "off" }],
