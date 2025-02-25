@@ -6,8 +6,8 @@
 
             <hr class="my-0 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2024/OCT <a href="/patchnotes"
-                        class="hover:underline">CFE Transmision </a>. V. {{ version }}
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2025/FEB CFE Transmision <a href="/patchnotes"
+                        class="hover:underline"></a>. V. {{ version }}
                 </span>
                 <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                     
