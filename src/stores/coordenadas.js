@@ -18,8 +18,8 @@ export default class MyNameClass {
 
   ultimaMilla1() {
     return {
-      id:1,
-      name:'PE.ZTCNC.001',
+      id: 1,
+      name: 'PE.ZTCNC.001',
       path: [
         { torre: '0001', lng: -86.81924722, lat: 21.159025 },
         { torre: '002', lng: -86.81945278, lat: 21.15923889 },
@@ -67,8 +67,8 @@ export default class MyNameClass {
 
   ultimaMilla2() {
     return {
-      id:2,
-      name:'PE.ZTCNC.0002',
+      id: 2,
+      name: 'PE.ZTCNC.0002',
       path: [
         { torre: '035', lng: -86.82015556, lat: 21.17239722 },
         { torre: '002', lng: -86.82043046, lat: 21.17263591 },
@@ -96,8 +96,8 @@ export default class MyNameClass {
 
   ultimaMilla3() {
     return {
-      id:3,
-      name:'PE.ZTCNC.0003',
+      id: 3,
+      name: 'PE.ZTCNC.0003',
       path: [
         { torre: '001', lng: -86.80711111, lat: 21.19066667 },
         { torre: '002', lng: -86.80719444, lat: 21.19025 },
@@ -192,8 +192,8 @@ export default class MyNameClass {
 
   ultimaMilla4() {
     return {
-      id:4,
-      name:'PE.ZTCNC.0004',
+      id: 4,
+      name: 'PE.ZTCNC.0004',
       path: [{ torre: '002', lng: -86.82361111, lat: 21.17519444 },
       { torre: '003', lng: -86.82257817, lat: 21.17505767 },
       { torre: '004', lng: -86.82257817, lat: 21.17505767 },
@@ -221,8 +221,8 @@ export default class MyNameClass {
 
   ultimaMilla5() {
     return {
-      id:5,
-      name:'PE.ZTCNC.0005',
+      id: 5,
+      name: 'PE.ZTCNC.0005',
       path: [{ torre: '001', lng: -86.83069167, lat: 21.15613056 },
       { torre: '002', lng: -86.83023333, lat: 21.15617222 },
       { torre: '003', lng: -86.83001111, lat: 21.15620278 },
@@ -274,8 +274,8 @@ export default class MyNameClass {
 
   ultimaMilla6() {
     return {
-      id:6,
-      name:'PE.ZTCNC.0006',
+      id: 6,
+      name: 'PE.ZTCNC.0006',
       path: [{ torre: '001', lng: -86.81923611, lat: 21.159025 },
       { torre: '002', lng: -86.81925556, lat: 21.15877222 },
       { torre: '003', lng: -86.81933333, lat: 21.15836667 },
@@ -318,8 +318,8 @@ export default class MyNameClass {
 
   ultimaMilla7() {
     return {
-      id:7,
-      name:'PE.ZTCNC.0007',
+      id: 7,
+      name: 'PE.ZTCNC.0007',
       path: [{ torre: '001', lng: -86.82684722, lat: 21.15785833 },
       { torre: '002', lng: -86.82698611, lat: 21.15788889 },
       { torre: '003', lng: -86.82716667, lat: 21.15797778 },
@@ -370,8 +370,8 @@ export default class MyNameClass {
 
   ultimaMilla8() {
     return {
-      id:8,
-      name:'PE.ZTCNC.0008',
+      id: 8,
+      name: 'PE.ZTCNC.0008',
       path: [{ torre: '001', lng: -86.82316667, lat: 21.14425 },
       { torre: '002', lng: -86.82344444, lat: 21.14427778 },
       { torre: '003', lng: -86.82363889, lat: 21.14438889 },
@@ -458,8 +458,8 @@ export default class MyNameClass {
 
   ultimaMilla9() {
     return {
-      id:9,
-      name:'PE.ZTCNC.0009',
+      id: 9,
+      name: 'PE.ZTCNC.0009',
       path: [
         { torre: '001', lng: -86.86952631, lat: 21.14386961 },
         { torre: '002', lng: -86.87019444, lat: 21.14288889 },
@@ -603,8 +603,8 @@ export default class MyNameClass {
 
   ultimaMilla11() {
     return {
-      id:11,
-      name:'PE.ZTCNC.0011',
+      id: 11,
+      name: 'PE.ZTCNC.0011',
       path: [{ torre: '001', lng: -86.82276209, lat: 21.16091314 },
       { torre: '002', lng: -86.82276209, lat: 21.16091314 },
       { torre: '003', lng: -86.82319444, lat: 21.16062222 },
@@ -635,8 +635,8 @@ export default class MyNameClass {
 
   ultimaMilla29() {
     return {
-      id:29,
-      name:'PE.ZTCNC.0029',
+      id: 29,
+      name: 'PE.ZTCNC.0029',
       path: [
         { torre: '42', lng: -86.831136, lat: 21.134323 },
         { torre: '41', lng: -86.83120726, lat: 21.13477054 },
@@ -766,8 +766,8 @@ export default class MyNameClass {
 
   ultimaMilla30() {
     return {
-      id:30,
-      name:'PE.ZTCNC.0030',
+      id: 30,
+      name: 'PE.ZTCNC.0030',
       path: [{ torre: '1', lng: -86.853729, lat: 21.16023977 },
       { torre: '2', lng: -86.85335459, lat: 21.16003126 },
       { torre: '3', lng: -86.85306029, lat: 21.15983643 },
@@ -868,8 +868,8 @@ export default class MyNameClass {
 
   ultimaMilla36() {
     return {
-      id:36,
-      name:'PE.ZTCNC.0036',
+      id: 36,
+      name: 'PE.ZTCNC.0036',
       path: [{ torre: '001', lng: -86.83894444, lat: 21.15402222 },
       { torre: '002', lng: -86.83909722, lat: 21.15430833 },
       { torre: '003', lng: -86.83927222, lat: 21.15460833 },
@@ -931,8 +931,8 @@ export default class MyNameClass {
 
   ultimaMilla37() {
     return {
-      id:37,
-      name:'PE.ZTCNC.0037',
+      id: 37,
+      name: 'PE.ZTCNC.0037',
       path: [{ torre: '001', lng: -86.87028889, lat: 21.1438 },
       { torre: '002', lng: -86.87015556, lat: 21.14386111 },
       { torre: '003', lng: -86.86967222, lat: 21.14395 },
@@ -995,8 +995,8 @@ export default class MyNameClass {
 
   ultimaMilla47() {
     return {
-      id:47,
-      name:'PE.ZTCNC.0047',
+      id: 47,
+      name: 'PE.ZTCNC.0047',
       path: [{ torre: '001', lng: -86.83074167, lat: 21.15612778 },
       { torre: '002', lng: -86.83120833, lat: 21.15606944 },
       { torre: '003', lng: -86.83171667, lat: 21.15602222 },
@@ -1028,8 +1028,8 @@ export default class MyNameClass {
 
   ultimaMilla61() {
     return {
-      id:61,
-      name:'PE.ZTCNC.0061',
+      id: 61,
+      name: 'PE.ZTCNC.0061',
       path: [{ torre: '1', lng: -86.853729, lat: 21.16023977 },
       { torre: '2', lng: -86.85335459, lat: 21.16003126 },
       { torre: '3', lng: -86.85306029, lat: 21.15983643 },
@@ -1092,8 +1092,8 @@ export default class MyNameClass {
 
   ultimaMilla66() {
     return {
-      id:66,
-      name:'PE.ZTCNC.0066',
+      id: 66,
+      name: 'PE.ZTCNC.0066',
       path: [{ torre: '092', lng: -86.82361341, lat: 21.17519259 },
       { torre: '093', lng: -86.82350624, lat: 21.17501411 },
       { torre: '094', lng: -86.82329444, lat: 21.17462778 },
@@ -1122,8 +1122,8 @@ export default class MyNameClass {
 
   ultimaMilla67() {
     return {
-      id:67,
-      name:'PE.ZTCNC.0067',
+      id: 67,
+      name: 'PE.ZTCNC.0067',
       path: [{ torre: '109', lng: -86.82452478, lat: 21.17123526 },
       { torre: '110', lng: -86.82443611, lat: 21.17090278 },
       { torre: '111', lng: -86.82450556, lat: 21.17076667 },
@@ -1176,8 +1176,8 @@ export default class MyNameClass {
 
   ultimaMilla68() {
     return {
-      id:68,
-      name:'PE.ZTCNC.0068',
+      id: 68,
+      name: 'PE.ZTCNC.0068',
       path: [{ torre: '001', lng: -86.82316667, lat: 21.14425 },
       { torre: '002', lng: -86.823154, lat: 21.144058 },
       { torre: '003', lng: -86.823574, lat: 21.143894 },
@@ -1226,6 +1226,153 @@ export default class MyNameClass {
     }
 
   }
+
+
+  poly1() {
+    return {
+      id: 1,
+      name: 'VAD-KHN',
+      path: [
+        { lat: 20.692642, lng: -88.194891 },
+        { lat: 21.140815, lng: -86.917530 }
+
+      ],
+      geodesic: true,
+      strokeColor: "#bf42f5",
+      strokeOpacity: 1.0,
+      strokeWeight: 3,
+    }
+  }
+
+
+  poly2() {
+    return {
+      id: 2,
+      name: 'VAD-RMY',
+      path: [
+        { lat: 20.692642, lng: -88.194891 },
+        { lat: 20.832738, lng: -86.930132 }
+      ],
+      geodesic: true,
+      strokeColor: "#bf42f5",
+      strokeOpacity: 1.0,
+      strokeWeight: 3,
+    }
+  }
+
+
+  poly3() {
+    return {
+      id: 3,
+      name: 'PE.ZTCNC.0068',
+      path: [
+        { lat: 21.140815, lng: -86.917530 },
+        { lat: 21.158897, lng: -86.819335 },
+        { lat: 20.832738, lng: -86.930132 },
+        { lat: 20.630607, lng: -87.081784 },
+        { lat: 20.630698, lng: -87.082716 },
+        { lat: 20.258916, lng: -87.471155 },
+        { lat: 20.630607, lng: -87.081784 },
+        { lat: 21.066734, lng: -86.847080 },
+        { lat: 21.158897, lng: -86.819335 },
+        { lat: 21.173510, lng: -86.848039 },
+        { lat: 21.066734, lng: -86.847080 },
+        { lat: 21.066993, lng: -86.846210 },
+        { lat: 21.186525, lng: -86.849396 },
+        { lat: 21.158897, lng: -86.819335 },
+        { lat: 21.134994, lng: -86.831353 },
+        { lat: 21.066993, lng: -86.846210 }
+
+      ],
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 3,
+    }
+  }
+
+
+  poly4() {
+    return {
+      id: 4,
+      name: 'S.E TUM - AGE TUM',
+      path: [
+        { lat: 20.212841, lng: -87.460363 },
+        { lat: 20.258916, lng: -87.471155 }
+      ],
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 3,
+    }
+  }
+
+
+  poly5() {
+    return {
+      id: 5,
+      name: 'HTPCN - HTCOZ',
+      path: [
+        { lat: 20.504474, lng: -86.955833 },
+        { lat: 20.630607, lng: -87.081784 },
+        { lat: 20.666698, lng: -87.069342 }
+      ],
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 3,
+    }
+  }
+
+
+  poly6() {
+    return {
+      id: 6,
+      name: 'S.E NIZ - CG CNC',
+      path: [
+        { lat: 21.068882, lng: -86.846557 },
+        { lat: 21.066734, lng: -86.847080 }
+      ],
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 3,
+    }
+  }
+
+  poly7() {
+    return {
+      id: 7,
+      name: 'BLM - KEK',
+      path: [
+        { lat: 21.193853, lng: -86.876067 },
+        { lat: 21.186525, lng: -86.849396 }
+      ],
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 3,
+    }
+  }
+
+
+  poly8() {
+    return {
+      id: 8,
+      name: 'ZOT - CCD',
+      path: [
+        { lat: 21.174155, lng: -86.847711 },
+        { lat: 21.173510, lng: -86.848039 }
+      ],
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 3,
+    }
+  }
+
+
+
 
 
 }

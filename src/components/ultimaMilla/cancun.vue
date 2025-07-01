@@ -5,7 +5,30 @@
         <div class="sm:col-span-9 col-span-12 ">
 
             <GoogleMap api-key="AIzaSyDcSa_dd4vPlcEFJZLzsLt-f75X79aSzM0" :style="estilosMapa" :center="center"
-                :zoom="currentZoom" :min-zoom="9" :max-zoom="20" :restriction="restriction" :styles="estilosMapa">
+                :zoom="currentZoom" :min-zoom="4" :max-zoom="20" :restriction="restriction" :styles="estilosMapa">
+
+                <!-- <Polyline :options="poly1" />
+                <CustomMarker :options="{ position: { lat: 20.918528, lng: -87.566060 }, anchorPoint: 'BOTTOM_CENTER' }">
+                    <div style="text-align: center">
+                        <div style="color:#bf42f5; font-size: 1rem; transform: rotate(340deg);" class="">FRONTERA
+                            VAD-XXXXX-KHN</div>
+                    </div>
+                </CustomMarker> -->
+
+                <!-- <Polyline :options="poly2" />
+                <CustomMarker :options="{ position: { lat: 20.751818, lng: -87.576539 }, anchorPoint: 'TOP_CENTER' }">
+                    <div style="text-align: center">
+                        <div style="color:#bf42f5; font-size: 1rem; transform: rotate(355deg);" class="">FRONTERA
+                            VAD-XXXXX-KHN</div>
+                    </div>
+                </CustomMarker> -->
+
+                <!-- <Polyline :options="poly3" /> -->
+                <!-- <Polyline :options="poly4" /> -->
+                <!-- <Polyline :options="poly5" /> -->
+                <!-- <Polyline :options="poly6" /> -->
+                <!-- <Polyline :options="poly7" /> -->
+                <Polyline :options="poly8" />
 
                 <!-- mostramos ruta alestra  -->
                 <template v-for="poli in polis">
@@ -33,6 +56,7 @@
             <ul class=" text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg  dark:border-gray-600 dark:text-black">
                 <li v-for="(data, index) in listaUltimasMillas "
                     class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    {{ data }}
                     <div class="flex items-center ps-3">
                         <input id="vue-checkbox" v-model="data.checked" @change="showRuta(data)" type="checkbox" value=""
                             class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
@@ -68,37 +92,38 @@ export default {
     data() {
         return {
             listaUltimasMillas: [
-                { id: 1, checked: false, name: 'PE.ZTCNC.0001', nombre: 'Milla Alestra ', tramo: 'ALESTRA - HTGCNC', distancia: '1.65 KM' },
-                { id: 2, checked: false, name: 'PE.ZTCNC.0002', nombre: 'SCT CNC ', tramo: 'ALESTRA - HTGCNC', distancia: '1.1 KM' },
-                { id: 3, checked: false, name: 'PE.ZTCNC.0003', nombre: 'SCT PJU  ', tramo: 'ALESTRA - HTGCNC', distancia: '3.8 KM' },
-                { id: 4, checked: false, name: 'PE.ZTCNC.0004', nombre: 'ZDD CNC  ', tramo: 'ALESTRA - HTGCNC', distancia: '1.3 KM' },
-                { id: 5, checked: false, name: 'PE.ZTCNC.0005', nombre: ' ALESTRA CNC ', tramo: 'ALESTRA - HTGCNC', distancia: ' 2 KM' },
-                { id: 6, checked: false, name: 'PE.ZTCNC.0006', nombre: ' PROFECO CNC ', tramo: 'ALESTRA - HTGCNC', distancia: '1 KM' },
-                { id: 7, checked: false, name: 'PE.ZTCNC.0007', nombre: ' SE KUKULKAN ', tramo: 'ALESTRA - HTGCNC', distancia: '1.9 KM' },
-                { id: 8, checked: false, name: 'PE.ZTCNC.0008', nombre: ' COPPEL', tramo: 'ALESTRA - HTGCNC', distancia: '2.89 KM' },
-                { id: 9, checked: false, name: 'PE.ZTCNC.0009', nombre: ' ZDD R96', tramo: 'ALESTRA - HTGCNC', distancia: '5.9  KM' },
-                { id: 11, checked: false, name: 'PE.ZTCNC.0011', nombre: ' SCJ CNC', tramo: 'ALESTRA - HTGCNC', distancia: ' 1 KM' },
-                { id: 29, checked: false, name: 'PE.ZTCNC.0029', nombre: 'HTGCNC - SE CNC ', tramo: 'ALESTRA - HTGCNC', distancia: '4 KM' },
-                { id: 30, checked: false, name: 'PE.ZTCNC.0030', nombre: 'SE CNC  - AGE PTE    ', tramo: 'ALESTRA - HTGCNC', distancia: '11.86 KM' },
-                { id: 36, checked: false, name: 'PE.ZTCNC.0036', nombre: 'PJF - SE KUK ', tramo: 'ALESTRA - HTGCNC', distancia: '2.3 KM' },
-                { id: 37, checked: false, name: 'PE.ZTCNC.0037', nombre: 'ZDD R96 - PJF', tramo: 'ALESTRA - HTGCNC', distancia: '2.39 KM' },
-                { id: 47, checked: false, name: 'PE.ZTCNC.0047', nombre: 'ALESTRA - SE CNC', tramo: 'ALESTRA - HTGCNC', distancia: '0.92 KM' },
-                { id: 61, checked: false, name: 'PE.ZTCNC.0061', nombre: 'ZDD R96 - AGE PTE ', tramo: 'ALESTRA - HTGCNC', distancia: '5.23 KM' },
-                { id: 67, checked: false, name: 'PE.ZTCNC.0067', nombre: 'SCT CNC - ZDD CNC', tramo: 'ALESTRA - HTGCNC', distancia: '1.5 KM' },
-                { id: 68, checked: false, name: 'PE.ZTCNC.0068', nombre: 'COPPEL - SE CNC', tramo: 'ALESTRA - HTGCNC', distancia: '1.89 KM' }
+                { lat: 21.174155, lng: -86.847711, show: true, abrev: 'CCD', nombre: 'CCD' },
+                { lat: 21.193853, lng: -86.876067, show: true, abrev: 'KEK', nombre: 'KANEK' },
+                { lat: 21.173510, lng: -86.848039, show: true, abrev: 'ZOT', nombre: 'ZONA DE OPERACION TRANSMISION' },
+                {id:1, lat: 21.140815, lng: -86.917530, show: true, abrev: 'S.E. KHN', nombre: 'KOHUNLICH' },
+                { lat: 21.186525, lng: -86.849396, show: true, abrev: 'S.E. BLM', nombre: 'BALAM' },
+                { lat: 21.158897, lng: -86.819335, show: true, abrev: 'HTGCNC', nombre: 'HOTEL GRANDE CANCUN' },
+                { lat: 21.066734, lng: -86.847080, show: true, abrev: 'S.E. NIZ', nombre: 'NIZUC' },
+                { lat: 21.066993, lng: -86.846210, show: true, abrev: 'CDCNIZ', nombre: 'CONFIABILIDAD NIZUC' },
+                { lat: 20.832738, lng: -86.930132, show: true, abrev: 'S.E. RMY', nombre: 'RIVIERA MAYA' },
+                { lat: 20.630698, lng: -87.082716, show: true, abrev: 'S.E. PCN', nombre: 'PLAYA DEL CARMEN' },
+                { lat: 20.630607, lng: -87.081784, show: true, abrev: 'HTMPCN', nombre: 'HOTEL MEDIANO PLAYA ' },
+                { lat: 20.666698, lng: -87.069342, show: true, abrev: 'ZDDRIV', nombre: 'ZONA DE DISTRIBUCION RIVIERA MAYA ' },
+                { lat: 20.504474, lng: -86.955833, show: true, abrev: 'HTMCOZ', nombre: 'COZUMEL ' },
+                { lat: 20.212841, lng: -87.460363, show: true, abrev: 'AGTUM', nombre: 'AGENCIA TULUM ' },
+                { lat: 20.258916, lng: -87.471155, show: true, abrev: 'S.E. TUM', nombre: 'TULUM ' },
+                {id:1, lat: 20.692642, lng: -88.194891, show: true, abrev: 'S.E. VAD', nombre: 'VALLADOLID' },
+                { lat: 21.134994, lng: -86.831353, show: true, abrev: 'CTGCNC', nombre: 'CENTRAL TURBOGAS CANCUN' },
+                { lat: 21.068882, lng: -86.846557, show: true, abrev: 'CTGNIZ', nombre: 'CENTRAL TURBO GAS NIZUC' },
             ],
+          
             taskstore: useTaskStore(),
-            currentZoom: 12,
+            currentZoom: 2,
             polilines: [],
             center: { lng: -86.82509444, lat: 21.15626667 },
             subestaciones: useTaskStore().ultimaMillaAlestra,
             polis: [],
             restriction: {
                 latLngBounds: {
-                    north: 21.2376,
-                    south: 21.0096,
-                    east: -86.72,
-                    west: -87,
+                    north: 21.645733,
+                    south: 19.940023,
+                    east: -86.119121,
+                    west: -88.824456,
                 }
             },
 
@@ -108,6 +133,10 @@ export default {
                 {
                     "featureType": "poi.business",
                     "stylers": [{ "visibility": "off" }],
+                },
+                {
+                    elementType: "labels.icon",
+                    stylers: [{ visibility: "off" }],
                 },
                 {
                     featureType: "transit",
@@ -124,7 +153,7 @@ export default {
             if (data.checked) {
                 //significa que hay que agregarlo al poliline, si es falso hay que quitarlo 
                 const nombreFull = new MyNameClass('leonel', 'bermonm')
-                const name = eval('nombreFull.ultimaMilla' + data.id + '()')
+                const name = eval('nombreFull.poly' + data.id + '()')
                 console.log(name.path)
 
 

@@ -30,6 +30,8 @@ import fo from '../views/fo.vue'
 import equiposr3 from '../components/EquiposR3.vue'
 import direccionesip from '../components/DireccionesIp.vue'
 
+import AltaEquipo from '../components/AltaEquipo.vue'
+
 //agregar componente de ultima milla 
 
 import EquipoView from '../views/EquipoView.vue'
@@ -46,6 +48,11 @@ const router = createRouter({
       path: "/subestaciones",
       name: "subestaciones",
       component: ListaSubestaciones
+    },
+    {
+      path: "/altaequipo",
+      name: "altaequipo",
+      component: AltaEquipo
     },
     // {
     //   path: "/qrs/:id",

@@ -15,6 +15,8 @@
             <Polyline :options="TinNiz" />
             <Polyline :options="Niz93040Rmy" />
             <Polyline :options="Niz97170Rmy" />
+            <Polyline :options="Pcn73790Tum" />
+            <Polyline :options="Chy73790Tum" />
 
             <Polyline :options="PcnRmy" />
             <Polyline :options="DztRmy" />
@@ -32,15 +34,11 @@
                                     equipo.nombre }}
                             </h2>
                             <div id="bodyContent">
-                                <p class="place-content-center">
-
+                                <!-- <p class="place-content-center">
                                     <img v-if="equipo.imgId == '1'" src="../../assets/img/imgMaps/OPLAT.svg" alt="">
                                     <img v-else-if="equipo.imgId == '2'" src="../../assets/img/imgMaps/OPLAT2.svg" alt="">
                                     <img v-else-if="equipo.imgId == '3'" src="../../assets/img/imgMaps/OPLAT3.svg" alt="">
-
-
-                                </p>
-
+                                </p> -->
                             </div>
                         </div>
                     </InfoWindow>
@@ -48,7 +46,7 @@
                 </Marker>
 
                 <CustomMarker :options="{ position: a, anchorPoint: 'TOP_CENTER' }"
-                    class="bg-gray-100 rounded-lg p-0.5 border-double border-2 border-indigo-600">
+                class="bg-gray-100 rounded-lg p-0.5 border-double border-2 border-gray-400">
                     <div style="text-align: center">
                         <div style="font-size: 1.125rem" class="font-bold"> S.E. {{ a.abrev }} </div>
                     </div>
@@ -59,7 +57,7 @@
         </GoogleMap>
     </center>
 </template>
-  
+
 <script>
 import { GoogleMap, Marker, InfoWindow, Polyline, CustomMarker } from "vue3-google-map";
 import photo1 from '@/assets/img/imgMaps/torre.svg'
@@ -72,12 +70,18 @@ export default {
             subestaciones: [
                 { lat: 20.692569, lng: -88.194927, abrev: 'VAD', nombre: 'VALLADOLID', equipos: [{ nombre: 'VAD-93050-BLM', idEquipo: 0, imgId: 1 }, { nombre: 'VAD-93070-NIZ', idEquipo: 0, imgId: 1 }] },
                 { lat: 20.686466, lng: -88.263579, abrev: 'DZT', nombre: 'DZINUP', equipos: [{ nombre: 'DZT-A3Q60-RMY', idEquipo: 0, imgId: 1 }, { nombre: 'DZT-A3Q70-RMY', idEquipo: 0, imgId: 1 }] },
-                { lat: 20.897165, lng: -87.489619, abrev: 'TIN', nombre: 'TINTAL', equipos: [{ nombre: 'TIN-73480-NIZ', idEquipo: 112,imgId: 2 }, { nombre: 'TIN-73C80-CEX', idEquipo: 111,imgId: 2 }] },
+                { lat: 20.897165, lng: -87.489619, abrev: 'TIN', nombre: 'TINTAL', equipos: [{ nombre: 'TIN-73480-NIZ', idEquipo: 112, imgId: 2 }, { nombre: 'TIN-73C80-CEX', idEquipo: 111, imgId: 2 }] },
                 { lat: 21.186525, lng: -86.849396, abrev: 'BLM', nombre: 'BALAM', equipos: [{ nombre: 'BLM-93050-VAD', idEquipo: 146, imgId: 3 }, { nombre: 'BLM-93060-NIZ', idEquipo: 147, imgId: 3 }] },
                 { lat: 21.066734, lng: -86.847080, abrev: 'NIZ', nombre: 'NIZUC', equipos: [{ nombre: 'TIN-73480-NIZ', idEquipo: 255, imgId: 2 }, { nombre: 'BLM-93060-NIZ', idEquipo: 30, imgId: 3 }, { nombre: 'VAD-93070-NIZ', idEquipo: 1, imgId: 1 }, { nombre: 'NIZ-93170-RMY', idEquipo: 44, imgId: 1 }, { nombre: 'NIZ-93040-RMY', idEquipo: 29, imgId: 1 }] },
-                { lat: 20.832738, lng: -86.930132, abrev: 'RMY', nombre: 'RIVIERA MAYA', equipos: [{ nombre: 'DZT-A3Q60-RMY', idEquipo: 150,imgId: 1 }, { nombre: 'DZT-A3Q70-RMY', idEquipo: 151, imgId: 1 }, { nombre: 'RMY-93170-NIZ', idEquipo: 152, imgId: 1 }, { nombre: 'RMY-93040-NIZ', idEquipo: 153, imgId: 1 }, { nombre: 'RMY-93190-PCN', idEquipo: 154, imgId: 1 }, { nombre: 'RMY-93180-PCN', idEquipo: 155, imgId: 1 }] },
-                { lat: 20.630698, lng: -87.082716, abrev: 'PCN', nombre: 'PLAYA DEL CARMEN', equipos: [{ nombre: 'RMY-93190-PCN', idEquipo: 148, imgId: 1 }, { nombre: 'RMY-93180-PCN', idEquipo: 149, imgId: 1 }] },
-                { lat: 20.661422, lng: -87.924403, abrev: 'CEX', nombre: 'CHEMAX', equipos: [{ nombre: 'CEX-73C80-TIN', idEquipo: 0, imgId: 2 }] }
+                { lat: 20.832738, lng: -86.930132, abrev: 'RMY', nombre: 'RIVIERA MAYA', equipos: [{ nombre: 'DZT-A3Q60-RMY', idEquipo: 150, imgId: 1 }, { nombre: 'DZT-A3Q70-RMY', idEquipo: 151, imgId: 1 }, { nombre: 'RMY-93170-NIZ', idEquipo: 152, imgId: 1 }, { nombre: 'RMY-93040-NIZ', idEquipo: 153, imgId: 1 }, { nombre: 'RMY-93190-PCN', idEquipo: 154, imgId: 1 }, { nombre: 'RMY-93180-PCN', idEquipo: 155, imgId: 1 }] },
+                { lat: 20.630698, lng: -87.082716, abrev: 'PCN', nombre: 'PLAYA DEL CARMEN', 
+                equipos: [{ nombre: 'RMY-93190-PCN', idEquipo: 148, imgId: 1 }, 
+                        { nombre: 'RMY-93180-PCN', idEquipo: 149, imgId: 1 } ,
+                        { nombre: 'CHY-73790-PCN', idEquipo: 149, imgId: 1 }] 
+                    },
+                { lat: 20.661422, lng: -87.924403, abrev: 'CEX', nombre: 'CHEMAX', equipos: [{ nombre: 'CEX-73C80-TIN', idEquipo: 0, imgId: 2 }] },
+                { lat: 20.355993, lng: -87.375020, abrev: 'CHY', nombre: 'CHEMUYIL', equipos: [{ nombre: 'CEX-73C80-TIN', idEquipo: 0, imgId: 2 }] }, //CHY,
+                { lat: 20.258916, lng: -87.471155, abrev: 'TUM', nombre: 'TULUM ', equipos: [{ nombre: 'CEX-73C80-TIN', idEquipo: 0, imgId: 2 }] },
             ],
             VadBlm: {
                 path: [
@@ -125,6 +129,23 @@ export default {
                 ],
                 geodesic: true,
                 strokeColor: "#1a1a17",
+                strokeOpacity: 1,
+                strokeWeight: 3
+            },
+            Chy73790Tum: {
+                path: [
+                    { lat: 20.355293, lng: -87.374907 },
+                    { lat: 20.346955, lng: -87.358031 },
+                    { lat: 20.331476, lng: -87.365959 },
+                    { lat: 20.322947, lng: -87.380040 },
+                    { lat: 20.301421, lng: -87.378996 },
+                    { lat: 20.255476, lng: -87.408625 },
+                    { lat: 20.256713, lng: -87.467683 },
+                    { lat: 20.260286, lng: -87.471059 },
+                    { lat: 20.259582, lng: -87.471873 },
+                ],
+                geodesic: true,
+                strokeColor: "#6f0af2",
                 strokeOpacity: 1,
                 strokeWeight: 3
             },
@@ -247,6 +268,27 @@ export default {
                 strokeOpacity: 1,
                 strokeWeight: 3
             },
+            Pcn73790Tum: {
+                path: [
+                { lat: 20.630178, lng: -87.083592 },
+                    { lat: 20.637031, lng: -87.099225 },
+                    { lat: 20.634830, lng: -87.114502 },
+                    { lat: 20.589503, lng: -87.132998 },
+                    { lat: 20.557425, lng: -87.174922 },
+                    { lat: 20.527319, lng: -87.198402 },
+                    { lat: 20.502868, lng: -87.237435 },
+                    { lat: 20.475334, lng: -87.266095 },
+                    { lat: 20.443541, lng: -87.292008 },
+                    { lat: 20.427045, lng: -87.303727 },
+                    { lat: 20.416707, lng: -87.322105 },
+                    { lat: 20.346955, lng: -87.358031 },
+                    { lat: 20.355293, lng: -87.374907 }
+                ],
+                geodesic: true,
+                strokeColor: "#fa6125",
+                strokeOpacity: 1,
+                strokeWeight: 3
+            },
             DztRmy: {
                 path: [
                     { lat: 20.832738, lng: -86.930132 },
@@ -293,6 +335,10 @@ export default {
                     "stylers": [{ "visibility": "off" }],
                 },
                 {
+                    elementType: "labels.icon",
+                    stylers: [{ visibility: "off" }],
+                },
+                {
                     featureType: "transit",
                     elementType: "labels.icon",
                     stylers: [{ visibility: "off" }],
@@ -323,4 +369,3 @@ export default {
 
 
 </script>
-

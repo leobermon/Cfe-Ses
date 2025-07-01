@@ -10,8 +10,8 @@ export const useTaskStore = defineStore('taskStore', {
         currentRack: 0,
         currentRackName: '',
         dbConnection: true,
-        ipAddress: "http://192.168.1.80:5000",
-        ipLocalServ: "http://192.168.1.80:5173",
+        ipAddress: "http://192.168.1.82:5000",
+        ipLocalServ: "http://192.168.1.82:5173",
         gabineteFiles: []
     }),
     getters: {

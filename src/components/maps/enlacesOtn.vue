@@ -11,9 +11,11 @@
             :styles="estilosMapa" :streetViewControl="false" :gestureHandling="greedy">
 
             <Polyline :options="TinNiz" />
-            <Polyline :options="Niz93040Rmy" />
+            <Polyline :options="Niz93040Ptp" />
             <Polyline :options="Pcn73790Chy" />
-
+            <Polyline :options="Chy73790Tum" />
+            <Polyline :options="Ptp93040Mpa" />
+            
             <template v-for="a in subestaciones">
 
                 <Marker :options="{ position: a, icon: icon }">
@@ -24,7 +26,7 @@
                             <div id="bodyContent">
                                 <p class="place-content-center">
                                     <img src="../../assets/img/imgMaps/OTN.svg" alt="" @click="test(a.idEquipo)"
-                                        style="cursos:pointer">
+                                        style="cursor:pointer">
                                 </p>
                             </div>
                         </div>
@@ -35,7 +37,7 @@
                 </Marker>
 
                 <CustomMarker :options="{ position: a, anchorPoint: 'TOP_CENTER' }"
-                    class="bg-gray-100 rounded-lg p-0.5 border-double border-2 border-indigo-600">
+                    class="bg-gray-100 rounded-lg p-0.5 border-double border-2 border-gray-400">
                     <div style="text-align: center">
                         <div style="font-size: 1.125rem" class="font-bold">S.E. {{ a.abrev }}</div>
                     </div>
@@ -57,21 +59,33 @@
                 </div>
             </CustomMarker>
 
-            <CustomMarker :options="{ position: { lat: 20.989408, lng: -86.877752 }, anchorPoint: 'BOTTOM_CENTER' }">
+            <CustomMarker :options="{ position: { lat: 20.990377, lng:-86.881468}, anchorPoint: 'BOTTOM_CENTER' }">
                 <div style="text-align: center">
 
-                    <div style="color:#584dff; font-size: 1rem; transform: rotate(0deg);" class="font-bold">PTP-73B30-MPA
+                    <div style="color:#f20a15; font-size: 1rem; transform: rotate(0deg);" class="font-bold">PTP-73B30-MPA
                     </div>
                 </div>
             </CustomMarker>
 
-            <CustomMarker :options="{ position: { lat: 20.501830, lng: -87.216771 }, anchorPoint: 'TOP_CENTER' }">
+            <CustomMarker :options="{ position: { lat: 20.575761, lng: -87.147555 }, anchorPoint: 'TOP_CENTER' }">
                 <div style="text-align: center">
 
-                    <div style="color:#fa6125; font-size: 1rem; transform: rotate(320deg);" class="font-bold">PCN-73790-CHY
+                    <div style="color:#fa6125; font-size: 1rem;  transform: rotate(320deg);" class="font-bold">PCN-73790-CHY
                     </div>
                 </div>
             </CustomMarker>
+         
+            <CustomMarker :options="{ position: { lat: 20.253286, lng:-87.436842 }, anchorPoint: 'TOP_CENTER' }">
+                <div style="text-align: center">
+
+                    <div style="color:#6f0af2; font-size: 1rem;  " class="font-bold">TUM-73790-CHY
+                    </div>
+                </div>
+            </CustomMarker>
+
+          
+
+
 
         </GoogleMap>
         </center>
@@ -86,7 +100,6 @@ import MyNameClass from "../../stores/coordenadas.js";
 import { useRouter } from 'vue-router';
   
 
-
 export default {
     components: { GoogleMap, Marker, Polyline, InfoWindow, CustomMarker },
     data() {
@@ -100,7 +113,8 @@ export default {
                 { lat: 20.994938, lng: -86.887671, abrev: 'PTP', idEquipo: 157, nombre: 'PETEMPICH' }, //ptp
                 { lat: 20.984939, lng: -86.882867, abrev: 'MPA', idEquipo: 155, nombre: 'MOON PALACE' }, //mpl
                 { lat: 20.630688, lng: -87.082711, abrev: 'PCN', idEquipo: 154, nombre: 'PLAYA DEL CARMEN' }, //pcn
-                { lat: 20.355993, lng: -87.375020, abrev: 'CHY', idEquipo: 156, nombre: 'CHEMUYIL' } //CHY
+                { lat: 20.355993, lng: -87.375020, abrev: 'CHY', idEquipo: 156, nombre: 'CHEMUYIL' }, //CHY,
+                { lat: 20.258916, lng: -87.471155, abrev: 'TUM', idEquipo: 282 ,nombre: 'TULUM ' }, //tum
             ],
             TinNiz: {
                 path: [
@@ -119,7 +133,7 @@ export default {
                 strokeOpacity: 1,
                 strokeWeight: 4
             },
-            Niz93040Rmy: {
+            Niz93040Ptp: {
                 path: [
                     { lat: 21.066734, lng: -86.847080 },
                     { lat: 21.067730, lng: -86.846853 },
@@ -129,10 +143,23 @@ export default {
                     { lat: 21.055142, lng: -86.919088 },
                     { lat: 21.042716, lng: -86.904153 },
                     { lat: 20.995394, lng: -86.887238 },
-                    { lat: 20.984925, lng: -86.883494 },
+              
                 ],
                 geodesic: true,
                 strokeColor: "#584dff",
+                strokeOpacity: 1,
+                strokeWeight: 4
+            },
+            Ptp93040Mpa: {
+                path: [
+                  
+                  
+                   
+                    { lat: 20.995394, lng: -86.887238 },
+                    { lat: 20.984925, lng: -86.883494 },
+                ],
+                geodesic: true,
+                strokeColor: "#f20a15",
                 strokeOpacity: 1,
                 strokeWeight: 4
             },
@@ -155,21 +182,12 @@ export default {
                 geodesic: true,
                 strokeColor: "#fa6125",
                 strokeOpacity: 1,
-                strokeWeight: 4
+                strokeWeight: 3
             },
-            Pcn73790Tum: {
+            Chy73790Tum: {
                 path: [
-                    { lat: 20.630178, lng: -87.083592 },
-                    { lat: 20.637031, lng: -87.099225 },
-                    { lat: 20.634830, lng: -87.114502 },
-                    { lat: 20.589503, lng: -87.132998 },
-                    { lat: 20.557425, lng: -87.174922 },
-                    { lat: 20.527319, lng: -87.198402 },
-                    { lat: 20.502868, lng: -87.237435 },
-                    { lat: 20.475334, lng: -87.266095 },
-                    { lat: 20.443541, lng: -87.292008 },
-                    { lat: 20.427045, lng: -87.303727 },
-                    { lat: 20.416707, lng: -87.322105 },
+                    { lat: 20.355293, lng: -87.374907 },
+                    { lat: 20.346955, lng: -87.358031 },
                     { lat: 20.331476, lng: -87.365959 },
                     { lat: 20.322947, lng: -87.380040 },
                     { lat: 20.301421, lng: -87.378996 },
@@ -179,7 +197,7 @@ export default {
                     { lat: 20.259582, lng: -87.471873 },
                 ],
                 geodesic: true,
-                strokeColor: "#fa6125",
+                strokeColor: "#6f0af2",
                 strokeOpacity: 1,
                 strokeWeight: 3
             },
@@ -199,13 +217,15 @@ export default {
                     "stylers": [{ "visibility": "off" }],
                 },
                 {
+                    elementType: "labels.icon",
+                    stylers: [{ visibility: "off" }],
+                },
+                {
                     featureType: "transit",
                     elementType: "labels.icon",
                     stylers: [{ visibility: "off" }],
                 }
             ]
-
-
 
 
         }
