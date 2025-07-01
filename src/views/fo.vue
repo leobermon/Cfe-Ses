@@ -7,37 +7,37 @@
 
             <div class="w-6/6 md:w-4/6 text-center text-[8px]   md:text-sm  ">
 
-                <div class="p-4" >
+                <div class="p-4">
 
                     <div class=" grid grid-cols-4 ">
 
                         <div style="padding: 4px;" class="border border-gray ">
-                            <p  > NOMBRE: </p>
-                            <p class="font-bold" > {{ actualSheet.nombre }} </p> 
+                            <p> NOMBRE: </p>
+                            <p class="font-bold"> {{ actualSheet.nombre }} </p>
                         </div>
-                        <div style="padding: 4px;" class="border border-gray bg-gray-100"> 
+                        <div style="padding: 4px;" class="border border-gray bg-gray-100">
                             <p> PM : </p>
-                            <p class="font-bold" > {{ actualSheet.activo }} </p>   
+                            <p class="font-bold"> {{ actualSheet.activo }} </p>
                         </div>
-                            <div style="padding: 4px;" class="border border-gray ">
-                                <p> CONSECUTIVO: </p>
-                                <p class="font-bold" > {{ actualSheet.codigo }} </p> 
-                            </div>
-                            <div style="padding: 4px;" class="border border-gray ">
-                                <button @click="generateReport()" type="button" class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs md:text-sm  px-5 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Descargar PDF </button>
-                
-                            </div>
-                    </div>
-                    
+                        <div style="padding: 4px;" class="border border-gray ">
+                            <p> CONSECUTIVO: </p>
+                            <p class="font-bold"> {{ actualSheet.codigo }} </p>
+                        </div>
+                        <div style="padding: 4px;" class="border border-gray ">
+                            <button @click="generateReport()" type="button"
+                                class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs md:text-sm  px-5 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Descargar
+                                PDF </button>
 
+                        </div>
+                    </div>
                 </div>
 
                 <div id="PdfToGenerate">
                     <div class=" grid grid-cols-8 ">
 
-                        <div style="padding: 4px;" class="col-span-6"> <img src="../assets/img/cabecera1.png" class="w-60"
+                        <div style="padding: 4px;" class="col-span-7"> <img src="../assets/img/cabecera1.png" class="w-60"
                                 alt=""> </div>
-                        <div style="padding: 4px;" class="object-right col-span-2 "> <img src="../assets/img/cabecera2.png"
+                        <div style="padding: 4px;" class="object-right col-span-1 "> <img src="../assets/img/cabecera2.png"
                                 class="w-20 rigth" alt=""> </div>
 
                         <div style="padding: 4px;" class="border border-gray col-span-2 bg-gray-100">ZONA DE TRANSMISION
@@ -73,8 +73,10 @@
                         <div style="padding: 4px;" class="border border-gray bg-gray-100">PUNTA B</div>
                         <div style="padding: 4px;" class="border border-gray col-span=3">{{ datosHoja.derivadosPuntaB }}
                         </div>
-                        <div style="padding: 4px;" class="border border-gray col-span-2"></div>
 
+                        <div class="border bg-gray-100 "> DISTANCIA (KM) </div>
+
+                        <div style="padding: 4px;" class="border border-gray  "> {{ actualSheet.distancia }} </div>
 
                     </div>
 
@@ -104,7 +106,7 @@
 
             </div>
 
-           
+
         </template>
         <template v-else>
             <h1>NO EXISTE LA HOJA QUE ESTA BUSCANDO</h1>
@@ -150,7 +152,8 @@ export default {
         },
         async ConsultarHoja() {
             console.log('entra en funcion ConsultarHoja');
-            await fetch('../src/views/test2.xlsx')
+            //await fetch('../src/views/test2.xlsx')
+            await fetch('../src/views/OneDrive - COMISION FEDERAL DE ELECTRICIDAD/Server/Fo-2025.xlsx')
                 .then(response => response.blob())
                 .then(blob => readXlsxFIle(blob, { sheet: this.actualSheet.codigo }))
                 .then((rows2) => {
@@ -220,12 +223,11 @@ export default {
 
             try {
 
-                const resultado = await fetch('../src/views/test2.xlsx')
+                const resultado = await fetch('../src/views/OneDrive - COMISION FEDERAL DE ELECTRICIDAD/Server/Fo-2025.xlsx')
                     .then(response => response.blob())
                     .then(blob => readXlsxFIle(blob, { sheet: 'CODIGOS' }))
                     .then((rows) => {
                         // `rows` is an array of rows
-                        console.log(rows);
 
                         const actualFo = this.fo
                         var temp = []
@@ -238,6 +240,7 @@ export default {
                                     activo: value[2],
                                     codigo: value[3],
                                     nombre: value[4],
+                                    distancia: value[5]
                                 }
                                 return false
                             }
@@ -285,4 +288,3 @@ export default {
 }
 
 </script>
-
