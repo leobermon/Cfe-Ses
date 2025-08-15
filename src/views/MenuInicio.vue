@@ -168,6 +168,18 @@
             <p class="text-sm"> Lista de direcciones IP de equipos </p>
           </div>
         </div>
+      
+        <div
+          class="grid-cols-5 grid gap-x-2  max-w-sm px-2 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-300 cursor-pointer "
+          @click="changeRoute('casetasrei')">
+          <div class="col-span-2 ">
+            <img src="../assets/img/casetarei.svg" class="h-20 w-30" />
+          </div>
+          <div class="col-span-3 ">
+            <h5 class="mb-1 text-1xl font-bold tracking-tight text-gray-900 ">CASETAS REI</h5>
+            <p class="text-sm"> Mapa con las casetas REI </p>
+          </div>
+        </div>
 
 
 

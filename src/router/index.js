@@ -18,6 +18,7 @@ import PatchNotes from '../views/patchnotes.vue'
 import enlacesOplat from '../components/maps/enlacesOplat.vue'
 import enlacesOtn from '../components/maps/enlacesOtn.vue'
 import enlacesEci from '../components/maps/enlacesEci.vue'
+import casetasRei from '../components/maps/casetasRei.vue'
 
 import ultimaMillaTum_Age from '../components/ultimaMilla/tulum-agencia.vue' 
 import tulumPcn from '../components/ultimaMilla/tulum-pcn.vue' 
@@ -162,6 +163,12 @@ const router = createRouter({
       path: "/patchnotes",
       name: "",
       component: PatchNotes
+    },
+   
+    {
+      path: "/casetasrei",
+      name: "",
+      component: casetasRei
     },
    
     
